@@ -13,11 +13,12 @@
     --fw-reg: 300;
     --fw-bold: 900;
 
-    --clr-organge: #FF914D;
+    --clr-orange: #111;
+    /*--clr-orange: #FF914D;*/
     --clr-grey: #535353;
     --clr-light-orange: #6C5A4E;
     --clr-light-grey: #6E6E6E;
-    --clr-accent: #59307a;
+    --clr-accent: #CCFFCC;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -38,15 +39,42 @@
 }
 
 body {
-  background-color: lightblue;
+    background-color: black;
 }
 
 h1 {
-  color: white;
-  text-align: center;
+    color: var(--clr-orange);
+    text-align: center;
+    font-family: monospace;
 }
 
 p {
-  font-family: verdana;
-  font-size: 20px;
+    font-family: verdana;
+    font-size: 20px;
+    color: var(--clr-accent);
+}
+
+div {
+    padding: 100px;
+}
+
+.orange {
+    background-color: var(--clr-orange);
+}
+
+.light-orange {
+    background-color: var(--clr-light-orange);
+}
+
+.grey {
+    background-color: var(--clr-grey);
+}
+
+.light-grey {
+    background-color: var(--clr-light-grey);
+}
+
+.accent {
+    background-color: var(--clr-accent);
+
 }
