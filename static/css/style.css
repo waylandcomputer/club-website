@@ -14,7 +14,6 @@
     --fw-bold: 900;
 
     --clr-orange: #111;
-    /*--clr-orange: #FF914D;*/
     --clr-grey: #535353;
     --clr-light-orange: #6C5A4E;
     --clr-light-grey: #6E6E6E;
@@ -40,6 +39,7 @@
 
 body {
     background-color: black;
+    margin: 0px;
 }
 
 h1 {
@@ -77,4 +77,38 @@ div {
 .accent {
     background-color: var(--clr-accent);
 
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+    }
+
+li a:hover {
+  background-color: #111;
+}
+
+img {
+    width: 10px;
+    height: 10px;
+}
+
+#logo {
+    height: 40px;
+    width: 40px;
 }
