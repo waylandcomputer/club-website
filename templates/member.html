@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+{% endblock %}
+
+{% block content %}
+
+<h1>{{ member.fname}} {{ member.lname }}'s Personal Page!</h1>
+<p>I am in {{ member.grade }}th grade. I have {{ projects|length }} project(s). {{ member.description }}</p>
+<table>
+<tr>
+    <th>Project Name</th>
+    <th>Image</th>
+    <th>Description</th>
+    </tr>
+    <tr>
+        {% for project in projects %}
+        <td>{{ project.name }}</td>
+        <td>Link: {{ project.image }}</td>
+        <td>{{ project.description }}</td>
+        {% endfor %}
+    </tr>
+</table>
+
+{% endblock %}
+
