@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block styles %}
+{% endblock %}
+
+{% block content %}
+<h1>All Wayland CS Club Members!</h1>
+<table>
+<tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Grade</th>
+    <th>Description</th>
+    </tr>
+    {% for member in members %}
+    <tr>
+        <td>{{ member.fname }}</td>
+        <td>{{ member.lname }}</td>
+        <td>{{ member.grade }}</td>
+        <td>{{ member.description }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

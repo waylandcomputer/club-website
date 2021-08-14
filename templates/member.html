@@ -13,13 +13,13 @@
     <th>Image</th>
     <th>Description</th>
     </tr>
+    {% for project in projects %}
     <tr>
-        {% for project in projects %}
         <td>{{ project.name }}</td>
         <td>Link: {{ project.image }}</td>
         <td>{{ project.description }}</td>
-        {% endfor %}
     </tr>
+    {% endfor %}
 </table>
 
 {% endblock %}
