@@ -53,7 +53,7 @@ name: "Projects",
       flickityOptions: {
         initialIndex: 0,
         prevNextButtons: true,
-        pageDots: true,
+        pageDots: false,
         wrapAround: false
         
       }

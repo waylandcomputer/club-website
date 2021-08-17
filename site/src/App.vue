@@ -2,10 +2,10 @@
 <div class="main-container" id="app">
   <div id="nav">
     <a href="/"><img src="./assets/csclublogo.png" alt="club logo" class="logo"></a>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/members">Members</router-link> | 
-    <router-link to="/projects">Projects</router-link>
+    <router-link to="/" style="font-size: 1.25vw">Home</router-link> |
+    <router-link to="/about" style="font-size: 1.25vw">About</router-link> |
+    <router-link to="/members" style="font-size: 1.25vw">Members</router-link> | 
+    <router-link to="/projects" style="font-size: 1.25vw">Projects</router-link>
   </div>
   <router-view />
 </div>
