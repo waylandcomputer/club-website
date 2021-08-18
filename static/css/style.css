@@ -38,7 +38,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: gray;
     margin: 0px;
 }
 
@@ -103,12 +103,20 @@ li a:hover {
   background-color: #111;
 }
 
-img {
-    width: 10px;
-    height: 10px;
-}
+/*img {*/
+/*    width: 10px;*/
+/*    height: 10px;*/
+/*}*/
 
 #logo {
     height: 40px;
     width: 40px;
+}
+
+.slide {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 100px 0 0 0;
+    width: 100vw;
 }

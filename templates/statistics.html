@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block scripts %}
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="{{ url_for('static', filename='./js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='./js/bars.js') }}"></script>
+    <script src="{{ url_for('static', filename='./js/donut.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="slide">
+        <div id="vis1" class="vis"></div>
+        <div id="vis2" class="vis"></div>
+    </div>
+{% endblock %}

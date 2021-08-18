@@ -4,22 +4,63 @@
 {% endblock %}
 
 {% block content %}
-<h1>All Wayland CS Club Members!</h1>
-<table>
-<tr>
-    <th>First Name</th>
-    <th>Last Name</th>
-    <th>Grade</th>
-    <th>Description</th>
-    </tr>
-    {% for member in members %}
-    <tr>
-        <td>{{ member.fname }}</td>
-        <td>{{ member.lname }}</td>
-        <td>{{ member.grade }}</td>
-        <td>{{ member.description }}</td>
-    </tr>
-    {% endfor %}
-</table>
-
+    <h1>All Wayland CS Club Members!</h1>
+    <div class="container-fluid px-0">
+        <div class="row justify-content-center">
+            <figure class="col-lg-3 col-md-4">
+                <a href={{ url_for("get_member_info", member=p.fname + "_" + p.lname) }}>
+                    <img src={{ "../../static/assets/people/" + p.image }} alt={{ p.fname + " " + p.lname }}
+                         width=200
+                         height=200/>
+                </a>
+                <figcaption>
+                    <h5>{{ p.fname + " " +  p.lname }}</h5>
+                    <p class="figure-caption">{{ p.grade }}th Grade</p>
+                    {% set contacts = filter(p.id) %}
+                    {% for contact in contacts %}
+                        <a href={{ contact.link }}><i class="{{ contact.icon }} fa-lg" style="color: white"
+                                                      aria-hidden="true"></i></a>
+                    {% endfor %}
+                </figcaption>
+            </figure>
+            {% for vp in vps %}
+                <figure class="col-lg-3 col-md-4">
+                    <a href={{ url_for("get_member_info", member=vp.fname + "_" + vp.lname) }}>
+                        <img src={{ "../../static/assets/people/" + vp.image }} alt={{ vp.fname + " " + vp.lname }}
+                             width=200
+                             height=200/>
+                    </a>
+                    <figcaption>
+                        <h5>{{ vp.fname + " " +  vp.lname }}</h5>
+                        <p class="figure-caption">{{ vp.grade }}th Grade</p>
+                        {% set contacts = filter(vp.id) %}
+                        {% for contact in contacts %}
+                            <a href={{ contact.link }}><i class="{{ contact.icon }} fa-lg" style="color: white"
+                                                          aria-hidden="true"></i></a>
+                        {% endfor %}
+                    </figcaption>
+                </figure>
+            {% endfor %}
+        </div>
+        <div class="row justify-content-center">
+            {% for m in ms %}
+                <figure class="col-lg-2 col-md-3">
+                    <a href={{ url_for("get_member_info", member=m.fname + "_" + m.lname) }}>
+                        <img src={{ "../../static/assets/people/" + m.image }} alt={{ m.fname + " " + m.lname }}
+                             width=150
+                             height=150/>
+                    </a>
+                    <figcaption>
+                        <h5>{{ m.fname + " " +  m.lname }}</h5>
+                        <p class="figure-caption">{{ m.grade }}th Grade</p>
+                        {% set contacts = filter(m.id) %}
+                        {% for contact in contacts %}
+                            <a href={{ contact.link }}><i class="{{ contact.icon }} fa-lg" style="color: white"
+                                                          aria-hidden="true"></i></a>
+                        {% endfor %}
+                    </figcaption>
+                </figure>
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
