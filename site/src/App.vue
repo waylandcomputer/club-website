@@ -1,5 +1,5 @@
 <template>
-<div class="main-container" id="app">
+<div id="app" class="main-container">
   <div id="nav">
     <a href="/"><img src="./assets/csclublogo.png" alt="club logo" class="logo"></a>
     <router-link to="/" style="font-size: 1.25vw">Home</router-link> |
@@ -12,6 +12,9 @@
 </template>
 
 <style>
+ * {
+       margin: 0;
+   }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
