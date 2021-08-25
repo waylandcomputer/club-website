@@ -8,16 +8,42 @@
       <router-link to="/members" class="nav-link">Members</router-link>
       <router-link to="/projects" class="nav-link">Projects</router-link>
     </div>
-    <router-view />
+    <body>
+      <router-view />
+    </body>
+    <footer>
+      <div class="footer-text">Follow our socials!</div>
+      <div class="footer-images">
+        <div class="footer-image">
+          <a href="https://www.youtube.com/channel/UCwZ5Ip1wCb8yC9sfNnCtsZw"
+            ><img src="./assets/newytlogo.png" alt="Youtube Logo" width="80" />
+          </a>
+        </div>
+
+        <div class="footer-image">
+          <a href="https://www.youtube.com/channel/UCwZ5Ip1wCb8yC9sfNnCtsZw"
+            ><img src="./assets/newytlogo.png" alt="Youtube Logo" width="80" />
+          </a>
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:wght@100&display=swap");
+
 * {
   margin: 0;
 }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Lato", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -60,4 +86,26 @@
   font-size: 25px;
   text-decoration: none;
 }
+
+footer {
+  background-color: #ffbc57;
+  height: 300px;
+  margin-top: 200px;
+  padding: 10px;
+}
+
+.footer-text {
+  font-size: 50px;
+  color: #272525;
+}
+a :hover {
+  opacity: 0.3;
+}
+.footer-image {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+
+
 </style>
