@@ -4,7 +4,7 @@
       <router-link to="/"
         ><img src="./assets/csclublogo.png" alt="club logo" class="logo"
       /></router-link>
-      <router-link to="/about" class="nav-link">About</router-link>
+      <router-link style="margin-left: 10px" to="/about" class="nav-link">About</router-link>
       <router-link to="/members" class="nav-link">Members</router-link>
       <router-link to="/projects" class="nav-link">Projects</router-link>
     </div>
@@ -12,20 +12,7 @@
       <router-view />
     </body>
     <footer>
-      <div class="footer-text">Follow our socials!</div>
-      <div class="footer-images">
-        <div class="footer-image">
-          <a href="https://www.youtube.com/channel/UCwZ5Ip1wCb8yC9sfNnCtsZw"
-            ><img src="./assets/newytlogo.png" alt="Youtube Logo" width="80" />
-          </a>
-        </div>
-
-        <div class="footer-image">
-          <a href="https://www.youtube.com/channel/UCwZ5Ip1wCb8yC9sfNnCtsZw"
-            ><img src="./assets/newytlogo.png" alt="Youtube Logo" width="80" />
-          </a>
-        </div>
-      </div>
+     
     </footer>
   </div>
 </template>
@@ -43,7 +30,7 @@ body {
   margin: 0;
 }
 #app {
-  font-family: "Lato", sans-serif;
+  font-family: monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -63,16 +50,22 @@ body {
 #nav a {
   font-weight: bold;
   vertical-align: middle;
-  color: #ffbc57;
+  color: #FF914D;
+}
+
+#nav a :hover {
+  color:grey
 }
 
 #nav a.router-link-exact-active {
-  color: orange;
+  color: #ffbc57;
 }
 
+
 .logo {
-  height: 100px;
-  width: 100px;
+  height: 75px;
+  width: 75px;
+  margin-left: 10px
 }
 .main-container {
   min-height: 100vh; /* will cover the 100% of viewport */
@@ -83,7 +76,7 @@ body {
 }
 .nav-link {
   margin-left: 20px;
-  font-size: 25px;
+  font-size: 15px;
   text-decoration: none;
 }
 
@@ -98,8 +91,13 @@ footer {
   font-size: 50px;
   color: #272525;
 }
-a :hover {
-  opacity: 0.3;
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.nav-link:hover { 
+  color: yellow;
 }
 .footer-image {
   margin-left: 50px;
