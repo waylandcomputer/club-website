@@ -54,7 +54,7 @@ body {
 }
 
 #nav a:hover {
-  color:grey
+  opacity:0.8;
 }
 
 #nav a.router-link-exact-active {
@@ -96,9 +96,6 @@ footer {
   opacity: 0.8;
 }
 
-.nav-link:hover { 
-  color: yellow;
-}
 .footer-image {
   margin-left: 50px;
   margin-right: 50px;
