@@ -12,7 +12,20 @@
       <router-view />
     </body>
     <footer>
-     
+        <ul class="social-list">
+          <li class="social-list__item">
+              <a class="social-list__link" href="https://github.com/waylandcomputer" target="_blank"><i class="fab fa-github"></i></a>
+          </li>
+          <li class="social-list__item">
+              <a class="social-list__link" href="https://www.youtube.com/channel/UCwZ5Ip1wCb8yC9sfNnCtsZw" target="_blank"><i class="fab fa-youtube"></i></a>
+          </li>
+          <li class="social-list__item">
+              <a class="social-list__link" href="https://www.instagram.com/waylandcomputer/" target="_blank"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li class="social-list__item">
+              <a class="social-list__link" href="https://twitter.com/wayland_cs" target="_blank"><i class="fab fa-twitter"></i></a>
+          </li>
+      </ul>
     </footer>
   </div>
 </template>
@@ -23,11 +36,15 @@
 * {
   margin: 0;
 }
+
+html {background-color: #111}
+
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
+  /*min-height: 50vh;*/
+  /*the above is*/
+  padding-bottom: 50px;
 }
 #app {
   font-family: monospace;
@@ -61,14 +78,14 @@ body {
   color: #ffbc57;
 }
 
-
 .logo {
   height: 75px;
   width: 75px;
-  margin-left: 10px
+  margin-left: 10px;
+  transition: transform 250ms ease-in-out;
 }
 .main-container {
-  min-height: 100vh; /* will cover the 100% of viewport */
+  /*min-height: 100vh;*/
   overflow: hidden;
   display: block;
   position: relative;
@@ -76,15 +93,18 @@ body {
 }
 .nav-link {
   margin-left: 20px;
-  font-size: 15px;
+  font-size: 18px;
   text-decoration: none;
+  transition: transform 250ms ease-in-out;
+}
+
+.nav-link:hover {
+  transform: scale(1.1);
 }
 
 footer {
-  background-color: #ffbc57;
-  height: 300px;
-  margin-top: 200px;
-  padding: 10px;
+  background-color: #111;
+  padding: 25px;
 }
 
 .footer-text {
@@ -94,11 +114,39 @@ footer {
 
 .logo:hover {
   opacity: 0.8;
+  transform: scale(1.1);
 }
 
-.footer-image {
-  margin-left: 50px;
-  margin-right: 50px;
+.social-list__link:focus,
+.social-list__link:hover {
+    opacity: .8;
+    outline: none;
+
+}
+
+.social-list__item:hover {
+    transform: scale(1.1);
+
+}
+
+.social-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 2em 0;
+    padding: 0;
+
+}
+
+.social-list__item {
+    transition: transform 250ms ease-in-out;
+    margin: 0 .5em;
+}
+
+.social-list__link {
+    font-size: 40px;
+    color: #ffbc57;
+    padding: .5em;
 }
 
 
