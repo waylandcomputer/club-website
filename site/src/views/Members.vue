@@ -19,27 +19,27 @@
 <script>
 import Member from "../components/Member.vue";
 export default {
-  name: "Members",
-  components: {
+    name: "Members",
+    components: {
     Member,
-  },
-  data() {
+    },
+    data() {
     return {
       image: require("../assets/csclublogo.png"),
       userData: [],
     };
-  },
-  methods: {
+    },
+    methods: {
     getData() {
       fetch("https://jsonplaceholder.typicode.com/users")
         .then((response) => response.json())
         .then((data) => (this.userData = data));
     },
-  },
-  created() {
+    },
+    created() {
     this.getData();
-  },
-};
+    },
+    };
 </script>
 
 <style scoped>
