@@ -26,11 +26,11 @@ export default {
 
 <style scoped>
 .team {
-  width: 640px;
-  height: 360px;
+    width: 640px;
+    height: 360px;
 }
 .logo {
-  width: 200px;
-  height: 200px;
+    width: 200px;
+    height: 200px;
 }
 </style>

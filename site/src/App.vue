@@ -44,7 +44,6 @@ body {
   flex-direction: column;
   /*min-height: 50vh;*/
   /*the above is*/
-  padding-bottom: 50px;
 }
 #app {
   font-family: monospace;
