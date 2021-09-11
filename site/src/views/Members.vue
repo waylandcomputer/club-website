@@ -1,44 +1,42 @@
 <template>
-  <div class="members">
-    <h1>Current Members</h1>
-    <div class="members-div">
-        <div class="member-grid">
-          <div class="member" v-for="user in userData" v-bind:key="user.name">
-            <Member
-              :name="user.name"
-              :imagePath="image"
-              :username="user.username"
-              :website="user.website"
-            />
+    <div class="members">
+        <h1>Current Members</h1>
+        <div class="members-div">
+            <div class="member-grid">
+                <div class="member" v-for="user in userData" v-bind:key="user.id">
+                    <Member
+                        :name="user.fname + ' ' + user.lname"
+                        :image="user.image"
+                        :grade="user.grade"
+                    />
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </template>
 
 <script>
-import Member from "../components/Member.vue";
-export default {
-    name: "Members",
-    components: {
-    Member,
-    },
-    data() {
-    return {
-      image: require("../assets/csclublogo.png"),
-      userData: [],
-    };
-    },
-    methods: {
-    getData() {
-      fetch("https://jsonplaceholder.typicode.com/users")
-        .then((response) => response.json())
-        .then((data) => (this.userData = data));
-    },
-    },
-    created() {
-    this.getData();
-    },
+    import Member from "../components/Member.vue";
+    import data from "../assets/example3.json";
+
+    export default {
+        name: "Members",
+        components: {
+            Member,
+        },
+        data() {
+            return {
+                userData: [],
+            };
+        },
+        methods: {
+            getData() {
+                this.userData = data;
+            },
+        },
+        created() {
+            this.getData();
+        },
     };
 </script>
 

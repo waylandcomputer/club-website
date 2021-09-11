@@ -1,0 +1,183 @@
+[
+  {
+    "contact_list": [
+      {
+        "icon": "fab fa-linkedin", 
+        "link": "https://www.linkedin.com/in/andrew-boyer-1771791b0"
+      }, 
+      {
+        "icon": "fab fa-github", 
+        "link": "https://github.com/asboyer2"
+      }, 
+      {
+        "icon": "fab fa-spotify", 
+        "link": "https://open.spotify.com/user/uuzdbyuye92sxqjltw955qm9n?si=rPFH2WO_TQOwm8TH_PPzVQ"
+      }
+    ], 
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim turpis eget varius finibus. Sed orci dui, aliquet quis varius id, fermentum eu nunc. Cras urna odio, ornare ut vestibulum vitae, sagittis ac odio. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi lacinia porta dolor. Nunc vestibulum urna quis nisi feugiat elementum. Praesent et risus tincidunt, sollicitudin elit nec, vehicula sapien. Phasellus lobortis ligula quis vestibulum suscipit. Donec volutpat sagittis posuere. Sed ac tellus sit amet nisl dictum elementum sit amet quis mauris. Aliquam eu nulla nec felis sodales suscipit. Ut in diam posuere, luctus dui pellentesque, mollis urna.", 
+    "fname": "Andrew", 
+    "grade": "12", 
+    "id": 1, 
+    "image": "Andrew.png", 
+    "lname": "Boyer", 
+    "position": "P"
+  }, 
+  {
+    "contact_list": [
+      {
+        "icon": "fa fa-envelope", 
+        "link": "mailto: jayanth.mani14@gmail.com"
+      }, 
+      {
+        "icon": "fab fa-linkedin", 
+        "link": "https://www.linkedin.com/in/jayanth-mani-9777b8206/"
+      }, 
+      {
+        "icon": "fab fa-github", 
+        "link": "https://github.com/Jayanth-Mani"
+      }
+    ], 
+    "description": "Ut odio mi, iaculis sed euismod sodales, tincidunt et nulla. Duis porta risus at convallis vulputate. Maecenas aliquet non massa eget auctor. Etiam molestie quam et aliquam auctor. Cras volutpat est libero, in efficitur ipsum euismod ac. Aenean metus neque, facilisis vel placerat quis, finibus nec quam. Mauris venenatis pulvinar elit vel placerat. Mauris cursus lacus et egestas imperdiet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam a diam quis velit elementum molestie vitae non nulla. Fusce pretium leo nec ante pretium, at malesuada odio interdum. Proin commodo, purus porttitor dictum ullamcorper, sem neque tristique purus, at tempus dolor metus sit amet nisi. Etiam elementum maximus aliquet. Maecenas feugiat ac turpis sed euismod.", 
+    "fname": "Jayanth", 
+    "grade": "10", 
+    "id": 2, 
+    "image": "Jayanth.jpg", 
+    "lname": "Mani", 
+    "position": "M"
+  }, 
+  {
+    "contact_list": [
+      {
+        "icon": "fa fa-envelope", 
+        "link": "mailto: bshen.324@gmail.com"
+      }, 
+      {
+        "icon": "fab fa-github", 
+        "link": "https://github.com/Shen0000"
+      }
+    ], 
+    "description": "Maecenas augue dolor, aliquet nec lacinia a, elementum sit amet lorem. Aliquam lectus lacus, scelerisque non malesuada a, imperdiet vitae est. Quisque quis lorem metus. Etiam scelerisque lacus nulla, sed ultricies lorem sodales ut. Morbi quis venenatis lectus. Vivamus ut magna varius, varius lorem eget, lacinia ipsum. Nam imperdiet eros eros, vel tempus ante rutrum facilisis. Aliquam lacinia, lectus venenatis porta aliquam, quam risus pulvinar libero, in sodales augue felis eget diam.", 
+    "fname": "Brendan", 
+    "grade": "10", 
+    "id": 3, 
+    "image": "Brendan.jpg", 
+    "lname": "Shen", 
+    "position": "M"
+  }, 
+  {
+    "contact_list": [
+      {
+        "icon": "fa fa-envelope", 
+        "link": "mailto: ericxie6@gmail.com"
+      }, 
+      {
+        "icon": "fab fa-instagram", 
+        "link": "https://www.instagram.com/ericxie_zz/"
+      }, 
+      {
+        "icon": "fab fa-github", 
+        "link": "https://github.com/ericx1e"
+      }, 
+      {
+        "icon": "fab fa-spotify", 
+        "link": "https://open.spotify.com/user/ericxxie?si=sCJdKbxVQVWEho6fVYAPng"
+      }
+    ], 
+    "description": "Praesent egestas fermentum felis, et malesuada odio convallis feugiat. Curabitur convallis lacus vitae feugiat consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse luctus nibh vitae neque gravida, id laoreet nulla faucibus. Nulla ultrices tellus nisi, at maximus lorem hendrerit et. Sed vehicula non dui id tincidunt. Proin quis sodales sem, vitae accumsan elit. Pellentesque eros ante, hendrerit id dapibus id, tempor in nibh. Pellentesque euismod vitae dui non mollis. Vestibulum sollicitudin tortor et leo laoreet mollis. Aenean aliquam augue sit amet nibh hendrerit aliquam. Ut laoreet massa non nisi ornare, vel tincidunt tellus euismod. Aliquam vestibulum mattis lectus, rutrum blandit libero congue ac. Vivamus et ante vitae orci faucibus posuere nec at lorem.", 
+    "fname": "Eric", 
+    "grade": "12", 
+    "id": 4, 
+    "image": "eric.jpg", 
+    "lname": "Xie", 
+    "position": "VP"
+  }, 
+  {
+    "contact_list": [
+      {
+        "icon": "fa fa-envelope", 
+        "link": "mailto: kevin_zhao@student.waylandps.org"
+      }, 
+      {
+        "icon": "fab fa-github", 
+        "link": "https://github.com/Kevin-Zhao-Github"
+      }
+    ], 
+    "description": "Sed sed mi nec leo faucibus dictum quis eget nulla. Vivamus consectetur magna lobortis tellus efficitur, id varius urna consectetur. Morbi vitae leo id ex gravida interdum id ac turpis. Quisque quis ultricies nibh. Nam vel lectus et quam elementum tempor sed at odio. Fusce placerat ipsum in fermentum tincidunt. Mauris ultrices, quam quis ullamcorper tincidunt, velit justo interdum massa, vel ultricies leo justo pretium nisi.", 
+    "fname": "Kevin", 
+    "grade": "12", 
+    "id": 5, 
+    "image": "kevin.png", 
+    "lname": "Zhao", 
+    "position": "VP"
+  }, 
+  {
+    "contact_list": [], 
+    "description": "Aliquam a nisi blandit, ultrices enim id, imperdiet sapien. In rutrum, nibh non volutpat rhoncus, mauris nulla semper augue, ut lobortis augue orci at nisl. Maecenas quis lobortis justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum egestas interdum purus sagittis pellentesque. Cras sit amet est sit amet urna volutpat ornare at at justo. Morbi vel arcu vitae nibh maximus dapibus nec id magna. Sed sit amet congue tortor. Sed sit amet varius lorem, porta accumsan lorem. Suspendisse dignissim iaculis dolor sit amet luctus. Nulla molestie sem non lectus vehicula tempor.", 
+    "fname": "First", 
+    "grade": "9", 
+    "id": 6, 
+    "image": "template.jpg", 
+    "lname": "Last", 
+    "position": "M"
+  }, 
+  {
+    "contact_list": [], 
+    "description": "Aliquam a nisi blandit, ultrices enim id, imperdiet sapien. In rutrum, nibh non volutpat rhoncus, mauris nulla semper augue, ut lobortis augue orci at nisl. Maecenas quis lobortis justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum egestas interdum purus sagittis pellentesque. Cras sit amet est sit amet urna volutpat ornare at at justo. Morbi vel arcu vitae nibh maximus dapibus nec id magna. Sed sit amet congue tortor. Sed sit amet varius lorem, porta accumsan lorem. Suspendisse dignissim iaculis dolor sit amet luctus. Nulla molestie sem non lectus vehicula tempor.", 
+    "fname": "First", 
+    "grade": "9", 
+    "id": 7, 
+    "image": "template.jpg", 
+    "lname": "Last", 
+    "position": "M"
+  }, 
+  {
+    "contact_list": [], 
+    "description": "Aliquam a nisi blandit, ultrices enim id, imperdiet sapien. In rutrum, nibh non volutpat rhoncus, mauris nulla semper augue, ut lobortis augue orci at nisl. Maecenas quis lobortis justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum egestas interdum purus sagittis pellentesque. Cras sit amet est sit amet urna volutpat ornare at at justo. Morbi vel arcu vitae nibh maximus dapibus nec id magna. Sed sit amet congue tortor. Sed sit amet varius lorem, porta accumsan lorem. Suspendisse dignissim iaculis dolor sit amet luctus. Nulla molestie sem non lectus vehicula tempor.", 
+    "fname": "First", 
+    "grade": "9", 
+    "id": 8, 
+    "image": "template.jpg", 
+    "lname": "Last", 
+    "position": "M"
+  }, 
+  {
+    "contact_list": [], 
+    "description": "Aliquam a nisi blandit, ultrices enim id, imperdiet sapien. In rutrum, nibh non volutpat rhoncus, mauris nulla semper augue, ut lobortis augue orci at nisl. Maecenas quis lobortis justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum egestas interdum purus sagittis pellentesque. Cras sit amet est sit amet urna volutpat ornare at at justo. Morbi vel arcu vitae nibh maximus dapibus nec id magna. Sed sit amet congue tortor. Sed sit amet varius lorem, porta accumsan lorem. Suspendisse dignissim iaculis dolor sit amet luctus. Nulla molestie sem non lectus vehicula tempor.", 
+    "fname": "First", 
+    "grade": "9", 
+    "id": 9, 
+    "image": "template.jpg", 
+    "lname": "Last", 
+    "position": "M"
+  }, 
+  {
+    "contact_list": [], 
+    "description": "Aliquam a nisi blandit, ultrices enim id, imperdiet sapien. In rutrum, nibh non volutpat rhoncus, mauris nulla semper augue, ut lobortis augue orci at nisl. Maecenas quis lobortis justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum egestas interdum purus sagittis pellentesque. Cras sit amet est sit amet urna volutpat ornare at at justo. Morbi vel arcu vitae nibh maximus dapibus nec id magna. Sed sit amet congue tortor. Sed sit amet varius lorem, porta accumsan lorem. Suspendisse dignissim iaculis dolor sit amet luctus. Nulla molestie sem non lectus vehicula tempor.", 
+    "fname": "First", 
+    "grade": "9", 
+    "id": 10, 
+    "image": "template.jpg", 
+    "lname": "Last", 
+    "position": "M"
+  }, 
+  {
+    "contact_list": [], 
+    "description": "Aliquam a nisi blandit, ultrices enim id, imperdiet sapien. In rutrum, nibh non volutpat rhoncus, mauris nulla semper augue, ut lobortis augue orci at nisl. Maecenas quis lobortis justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum egestas interdum purus sagittis pellentesque. Cras sit amet est sit amet urna volutpat ornare at at justo. Morbi vel arcu vitae nibh maximus dapibus nec id magna. Sed sit amet congue tortor. Sed sit amet varius lorem, porta accumsan lorem. Suspendisse dignissim iaculis dolor sit amet luctus. Nulla molestie sem non lectus vehicula tempor.", 
+    "fname": "First", 
+    "grade": "9", 
+    "id": 11, 
+    "image": "template.jpg", 
+    "lname": "Last", 
+    "position": "M"
+  }, 
+  {
+    "contact_list": [], 
+    "description": null, 
+    "fname": "Jun", 
+    "grade": "11", 
+    "id": 12, 
+    "image": "template.jpg", 
+    "lname": "ior", 
+    "position": "M"
+  }
+]
