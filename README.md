@@ -23,8 +23,7 @@ We use javascript for routing the website, together with a separate Flask app fo
 Start the main app with `npm run serve` (development) or `npm run build` (production).
 
 Go to `site/src/data_loader` and start the Flask app with `flask run`. Don't forget to change `.env` and `.flaskenv` during production (`git update-index --skip-worktree .env` to be safe).
-###
-###
+<br><br><br>
 #### Lints and fixes files
 ```
 npm run lint
