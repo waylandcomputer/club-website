@@ -59,16 +59,34 @@ def process_signup():
 
 @app.route('/load_data', methods=['GET'])
 def load_data():
-    data = {'members': [], 'languages': []}
+    data = {}
     members = Member.query.all()
     for member in members:
         member_info = member.__dict__
         del member_info['_sa_instance_state']
-        data['members'].append(member_info)
+        contact_info = Contact.query.filter_by(member=member.id).all()
+        contact_list = []
+        for contact in contact_info:
+            contact_dict = contact.__dict__
+            del contact_dict['member']
+            del contact_dict['cid']
+            del contact_dict['_sa_instance_state']
+            contact_list.append(contact_dict)
 
-    languages = Language.query.all()
-    for language in languages:
-        language_info = language.__dict__
-        del language_info['_sa_instance_state']
-        data['languages'].append(language_info)
+        member_info["contact_list"] = contact_list
+        data[member.id] = member_info
+
+    print(data)
+
+    # languages = Language.query.all()
+    # for language in languages:
+    #     language_info = language.__dict__
+    #     del language_info['_sa_instance_state']
+    #     data['languages'].append(language_info)
+    #
+    # contacts = Contact.query.all()
+    # for contact in contacts:
+    #     contact_info = contact.__dict__
+    #     del contact_info['_sa_instance_state']
+    #     data['contacts'].append(contact_info)
     return jsonify(data)

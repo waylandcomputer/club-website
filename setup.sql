@@ -2,6 +2,7 @@ DROP TABLE IF EXISTS members CASCADE;
 DROP TABLE IF EXISTS projects;
 DROP TABLE IF EXISTS languages;
 DROP TABLE IF EXISTS meetings;
+DROP TABLE IF EXISTS contacts;
 
 CREATE TABLE members (
     id SERIAL NOT NULL PRIMARY KEY,
@@ -12,15 +13,6 @@ CREATE TABLE members (
     position TEXT NOT NULL,
     description TEXT
 );
-
--- CREATE TABLE projects (
---     pid SERIAL NOT NULL PRIMARY KEY,
---     name TEXT NOT NULL,
---     owner SERIAL NOT NULL,
---     image TEXT NOT NULL,
---     description TEXT,
---     FOREIGN KEY (owner) REFERENCES members(id)
--- );
 
 CREATE TABLE contacts (
     cid SERIAL NOT NULL PRIMARY KEY,
@@ -93,7 +85,3 @@ INSERT INTO languages (language, member) VALUES ('Javascript', 4);
 INSERT INTO languages (language, member) VALUES ('Bash', 5);
 INSERT INTO languages (language, member) VALUES ('Java', 5);
 INSERT INTO languages (language, member) VALUES ('Python', 5);
-
--- INSERT INTO projects (name, owner, image, description) VALUES ('Reporty', 1, 'reporty.png', 'Reporty is a python library that contains useful functions for organizing and distributing visual data.');
--- INSERT INTO projects (name, owner, image, description) VALUES ('Epic Program', 2, 'prog.png', 'Prints Hello World.');
--- INSERT INTO projects (name, owner, image, description) VALUES ('Side Project', 1, 'prog2.png', 'Does cool stuff.');
