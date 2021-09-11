@@ -1,24 +1,33 @@
-# site
+# First Working Example of Front & Backend
 
-## Project setup
+## Requirements
+You need to have Node.js + npm, Python, and Postgresql installed.
+
+## Setup
+### Prepare Database:
 ```
-npm install
+psql postgres
+CREATE DATABASE club_website;
+\c club_website
+\i site/src/data_loader/setup.sql
+```
+### Install libraries:
+```
+cd site
+npm install  # installs javascript dependencies
+pip install -r src/data_loader/requirements.txt  # installs python modules
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+We use javascript for routing the website, together with a separate Flask app for loading data.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Start the main app with `npm run serve` (development) or `npm run build` (production).
 
-### Lints and fixes files
+Go to `site/src/data_loader` and start the Flask app with `flask run`. Don't forget to change `.env` and `.flaskenv` for production.
+
+#### Lints and fixes files
 ```
 npm run lint
 ```
 
-### Customize configuration
+#### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
