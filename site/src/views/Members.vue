@@ -17,9 +17,6 @@
 
 <script>
     import Member from "../components/Member.vue";
-    import data from "../assets/example3.json";
-
-    var processed_data = false;
 
     export default {
         name: "Members",
@@ -33,16 +30,9 @@
         },
         methods: {
             getData() {
-                if (!processed_data) {
-                    for (let i = 0; i < data.length; i++) {
-                        console.log('../assets/people/' + data[i].image);
-                        data[i].image = require('../assets/people/' + data[i].image);
-                    }
-
-                    processed_data = true;
-                }
-
-                this.userData = data;
+                fetch("http://localhost:5002/data/member_data")
+                    .then((response) => response.json())
+                    .then((data) => (this.userData = data));
             },
         },
         created() {
