@@ -1,4 +1,4 @@
-# First Working Example of Front & Backend
+# First Working Example with Front & Backend Combined
 
 ## Requirements
 You need to have Node.js + npm, Python, and Postgresql installed.
@@ -22,7 +22,7 @@ We use javascript for routing the website, together with a separate Flask app fo
 
 Start the main app with `npm run serve` (development) or `npm run build` (production).
 
-Go to `site/src/data_loader` and start the Flask app with `flask run`. Don't forget to change `.env` and `.flaskenv` for production.
+Go to `site/src/data_loader` and start the Flask app with `flask run`. Don't forget to change `.env` and `.flaskenv` during production.
 
 #### Lints and fixes files
 ```
