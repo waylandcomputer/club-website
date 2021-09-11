@@ -1,12 +1,10 @@
 <template>
     <div class="member-wrapper">
-        <img v-bind:src="imagePath" style="width: 100%" />
+        <img v-bind:src="image" style="width: 100%" />
         <div class="member-text">
               {{ name }}
               <br />
-              {{ username }}
-              <br />
-              {{ website }}
+              {{ grade }}
         </div>
     </div>
 </template>
@@ -15,14 +13,19 @@
 export default {
     name: "Member",
     props: {
-    name: {
-      type: String,
-      required: true,
+        name: {
+            type: String,
+            required: true,
+        },
+        image: {
+            type: String,
+            required: true,
+        },
+        grade: {
+            type: String,
+            required: true,
+        },
     },
-    imagePath: String,
-    username: String,
-    website: String,
-  },
 };
 </script>
 
