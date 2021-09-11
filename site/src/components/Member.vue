@@ -1,6 +1,6 @@
 <template>
     <div class="member-wrapper">
-        <img v-bind:src="image" style="width: 100%" />
+        <img v-bind:src="require(`../assets/people/${image}`)" style="width: 100%" />
         <div class="member-text">
               {{ name }}
               <br />
