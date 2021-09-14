@@ -1,4 +1,4 @@
-# site
+# waylandcs.com
 
 ## Project setup
 ```
