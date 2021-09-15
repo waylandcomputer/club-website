@@ -3,7 +3,7 @@
     <body>
 <flickity class="hero-slider" ref="flickity" :options="flickityOptions">
 
-	<div class="carousel-cell" style="background-image: url(http://s1.picswalls.com/wallpapers/2017/12/11/hd-nature-wallpaper_123026234_313.jpg);">
+	<div class="carousel-cell" id = "slide-1">
 		<div class="overlay"></div>
 		<div class="inner">
 			<h2 class="title">Reboothacks</h2>
@@ -107,8 +107,7 @@ body {
     text-align: center;
 }
 .hero-slider .carousel-cell .inner .subtitle {
-    font-family: 'Roboto Slab', serif;
-    font-size: 2.2rem;
+    font-size: 1.2rem;
     line-height: 1.2em;
     font-weight: 200;
     font-style: italic;
@@ -117,7 +116,6 @@ body {
     margin-bottom: 5px;
 }
 .hero-slider .carousel-cell .inner .title {
-    font-family: 'Montserrat', sans-serif;
     font-size: 3rem;
     line-height: 1.2em;
     text-transform: uppercase;
@@ -128,7 +126,6 @@ body {
     border: 1px solid #fff;
     padding: 14px 18px;
     text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
     font-size: 0.8rem;
     letter-spacing: 3px;
     color: #fff;
@@ -136,8 +133,8 @@ body {
     transition: all 0.2s ease;
 }
 .hero-slider .carousel-cell .inner .btn:hover {
-    background: #fff;
-    color: #000;
+    background: #000;
+    color: #ffbc57;
 }
 .hero-slider .flickity-prev-next-button {
     width: 80px;
@@ -167,5 +164,8 @@ body {
 }
 .empty {
     padding-bottom: 100px;
+}
+#slide-1 {
+    background-image: url("../assets/reboothacks.png")
 }
 </style>
