@@ -36,6 +36,7 @@ export default { // code taken from https://5balloons.info/post-form-data-to-api
     methods:{
         submitForm(){
             axios.post('http://localhost:5002/data/signup', this.form);
+            // clear form
             this.form.fname = "";
             this.form.lname = "";
             this.form.grade = "";

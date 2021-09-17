@@ -8,6 +8,7 @@
                         :name="user.fname + ' ' + user.lname"
                         :image="user.image"
                         :grade="user.grade"
+                        :contact_list="user.contact_list"
                     />
                 </div>
             </div>
@@ -32,7 +33,10 @@
             getData() {
                 fetch("http://localhost:5002/data/member_data")
                     .then((response) => response.json())
-                    .then((data) => (this.userData = data));
+                    .then((data) => {
+                        this.userData = data;
+                        //console.log(data);
+                    });
             },
         },
         created() {
