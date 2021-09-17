@@ -1,4 +1,4 @@
-# First Working Example with Front & Backend Combined
+# Combined Front & Backend
 
 ## Requirements
 You need to have Node.js + npm, Python, and Postgresql installed.
