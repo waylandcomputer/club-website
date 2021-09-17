@@ -1,23 +1,46 @@
 <template>
-<div>
-    <form action="/signup" method="post">
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname" value="John"><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname" value="Doe"><br><br>
-    <label for="grade">Grade:</label><br>
-    <input type="number" id="grade" name="grade" value="9"><br><br>
-    <input type="submit" value="Submit">
-</form>
-</div>
+    <div>
+        <form v-on:submit.prevent="submitForm">
+            <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" class="form-control" id="fname" placeholder="John" v-model="form.fname">
+            </div>
+            <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" class="form-control" id="lname" placeholder="Doe" v-model="form.lname">
+            </div>
+            <div class="form-group">
+                <label for="grade">Grade</label>
+                <input type="number" class="form-control" id="grade" placeholder="9" v-model="form.grade">
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
 </template>
 
 <script>
 
-export default {
-    name: "Signup",
-    
+import axios from 'axios';
+
+export default { // code taken from https://5balloons.info/post-form-data-to-api-using-axios-in-vuejs/
+    name: 'Signup',
+    data() {
+        return {
+            form: {
+                fname: '',
+                lname: '',
+                grade: ''
+            }
+        }
+    },
+    methods:{
+        submitForm(){
+            console.log(this.form);
+            axios.post('http://localhost:5002/data/signup', this.form);
+        }
+    }
 }
+
 </script>
 
 <style scoped>
