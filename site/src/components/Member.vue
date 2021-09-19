@@ -4,7 +4,7 @@
         <figcaption class="member-text">
             <h5>{{ name }}</h5>
             <h6>{{ grade }}</h6>
-            <span v-for="contact in this.contact_list" v-bind:key="contact.id">
+            <span v-for="contact in this.contact_list" v-bind:key="contact.id" class="contact-list">
                 <a v-bind:href="contact.link" target="_blank"><i v-bind:class="contact.icon + ' fa-lg'"
                             style="color: black" aria-hidden="true"></i></a>
             </span>
@@ -54,4 +54,12 @@
 .member-text {
     padding: 20px;
 }
+h6 {
+    margin: 5px;
+}
+.contact-list {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
 </style>
