@@ -18,6 +18,7 @@
 
 <script>
     import Member from "../components/Member.vue";
+    import data from "../assets/example4.json";
 
     export default {
         name: "Members",
@@ -31,12 +32,12 @@
         },
         methods: {
             getData() {
-                fetch("http://localhost:5002/data/member_data")
-                    .then((response) => response.json())
-                    .then((data) => {
-                        this.userData = data;
-                        //console.log(data);
-                    });
+                //fetch("http://localhost:5002/data/member_data")
+                //    .then((response) => response.json())
+                //    .then((data) => {
+                //        this.userData = data;
+                //    });
+                this.userData = data;
             },
         },
         created() {
