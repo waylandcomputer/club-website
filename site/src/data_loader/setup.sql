@@ -90,6 +90,23 @@ INSERT INTO contacts (link, icon, member) VALUES ('https://www.youtube.com/chann
 INSERT INTO contacts (link, icon, member) VALUES ('https://www.instagram.com/kailas.srinivasan/', 'fab fa-instagram', 7);
 INSERT INTO contacts (link, icon, member) VALUES ('https://twitter.com/mankeyvfx', 'fab fa-twitter', 7);
 
+INSERT INTO contacts (link, icon, member) VALUES ('mailto: mboykombo@gmail.com', 'fa fa-envelope', 8);
+INSERT INTO contacts (link, icon, member) VALUES ('https://www.instagram.com/misha.boyko14/', 'fab fa-instagram', 8);
+INSERT INTO contacts (link, icon, member) VALUES ('https://github.com/Misha-Boyko', 'fab fa-github', 8);
+
+INSERT INTO contacts (link, icon, member) VALUES ('mailto: rehandsam@gmail.com', 'fa fa-envelope', 11);
+INSERT INTO contacts (link, icon, member) VALUES ('https://github.com/Rehan164', 'fab fa-github', 11);
+
+INSERT INTO contacts (link, icon, member) VALUES ('https://www.instagram.com/carson.boyer/', 'fab fa-instagram', 12);
+INSERT INTO contacts (link, icon, member) VALUES ('https://github.com/TheCarsonBoyer', 'fab fa-github', 12);
+
+INSERT INTO contacts (link, icon, member) VALUES ('https://open.spotify.com/user/3db5ixjm0n68yrf71shqh10uk', 'fab fa-spotify', 13);
+INSERT INTO contacts (link, icon, member) VALUES ('https://github.com/sammmmmc', 'fab fa-github', 13);
+
+INSERT INTO contacts (link, icon, member) VALUES ('mailto: kashif.rashid.jr@gmail.com', 'fa fa-envelope', 17);
+INSERT INTO contacts (link, icon, member) VALUES ('https://www.instagram.com/cptcranjuice/', 'fab fa-instagram', 17);
+INSERT INTO contacts (link, icon, member) VALUES ('https://github.com/CptCranJuice', 'fab fa-github', 17);
+
 INSERT INTO languages (language, member) VALUES ('Bash', 1);
 INSERT INTO languages (language, member) VALUES ('Java', 1);
 INSERT INTO languages (language, member) VALUES ('Javascript', 1);
