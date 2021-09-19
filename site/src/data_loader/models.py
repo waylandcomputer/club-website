@@ -1,4 +1,7 @@
+import datetime
+
 from app import db
+from pytz import timezone
 from sqlalchemy import Table, Column, Integer, ForeignKey, DateTime
 from sqlalchemy.orm import relationship
 
@@ -12,6 +15,7 @@ class Member(db.Model):
     image = db.Column(db.String(64), nullable=False)
     position = db.Column(db.String(16), nullable=False)
     description = db.Column(db.String(256))
+    created_at = db.Column(DateTime, default=datetime.datetime.now(timezone('EST')))
 
     def toString(self):
         print(f"{self.fname} {self.lname}")

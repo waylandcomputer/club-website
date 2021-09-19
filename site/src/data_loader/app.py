@@ -1,5 +1,3 @@
-""" Lots of useless code here, as this app originally did all the routing. """
-
 import os
 
 from dotenv import load_dotenv
