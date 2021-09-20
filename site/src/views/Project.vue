@@ -24,7 +24,7 @@
             <h3 class="subtitle">Members from our team actively compete in CMU's yearly cybersecurity competition. In the spring of 2021, one of our teams ("Wayland Juniors") finished 49th in the country amoung 2280 high school teams.
             </h3>
             <div class="empty"></div>
-            <a href="https://play.picoctf.org/events/34/scoreboards#35" class="btn" target="empty">Sping 2021 Scoreboard</a>
+            <a href="https://play.picoctf.org/events/34/scoreboards#35" class="btn" target="empty">Spring 2021 Scoreboard</a>
         </div>
 	</div>
 
