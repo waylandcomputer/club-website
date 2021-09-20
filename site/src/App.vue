@@ -90,7 +90,10 @@ body::-webkit-scrollbar {
     padding: 0px;
     text-align: left;
     background-color: #111;
+    vertical-align: middle;
+    display: table;
 }
+
 
 #nav a {
     font-weight: bold;
@@ -120,10 +123,14 @@ body::-webkit-scrollbar {
     margin: 0;
 }
 .nav-link {
-    margin-left: 20px;
     font-size: 18px;
     text-decoration: none;
     transition: transform 250ms ease-in-out;
+    vertical-align: middle;
+    /*border: 1px solid #000000;*/
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 20px;
 }
 
 .nav-link:hover {
