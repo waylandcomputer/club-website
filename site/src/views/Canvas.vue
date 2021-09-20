@@ -132,6 +132,7 @@ export default {
           p5.ellipse(this.position.x, this.position.y, this.size, this.size);
 
           let nearest = particles[0];
+          let secondNearest = particles[1];
           if (this.dist(this.position, nearest.position) == 0) {
             nearest = particles[1];
           }
@@ -144,12 +145,29 @@ export default {
               nearest = particles[i];
             }
           }
+          for (let i = 0; i < particles.length; i++) {
+            if (
+              this.dist(this.position, particles[i].position) != 0 && this.dist(this.position, particles[i].position) >
+                this.dist(this.position, nearest.position) &&
+              this.dist(this.position, particles[i].position) <
+                this.dist(this.position, secondNearest.position)
+            ) {
+              secondNearest = particles[i];
+            }
+          }
           p5.line(
             this.position.x + p5.random(5),
             this.position.y + p5.random(5),
             nearest.position.x - nearest.velocity.x + p5.random(5),
             nearest.position.y - nearest.velocity.y + p5.random(5)
           );
+          p5.line(
+            this.position.x + p5.random(5),
+            this.position.y + p5.random(5),
+            secondNearest.position.x - secondNearest.velocity.x + p5.random(5),
+            secondNearest.position.y - secondNearest.velocity.y + p5.random(5)
+          );
+
 
           // let random = particles[Math.floor(p5.random(particles.length))];
           // p5.line(
