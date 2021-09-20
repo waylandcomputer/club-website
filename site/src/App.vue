@@ -4,7 +4,7 @@
         <router-link to="/"
         ><img src="./assets/csclublogo.png" alt="club logo" class="logo"
         /></router-link>
-        <router-link style="margin-left: 10px" to="/about" class="nav-link">about</router-link>
+        <router-link style="padding-left: 10px" to="/about" class="nav-link">about</router-link>
         <router-link to="/members" id="member-link" class="nav-link">members</router-link>
         <router-link to="/projects" class="nav-link">projects</router-link>
         <!-- <router-link to="/signup" class="nav-link">Sign Up</router-link> -->
@@ -90,7 +90,10 @@ body::-webkit-scrollbar {
     padding: 0px;
     text-align: left;
     background-color: #111;
+    vertical-align: middle;
+    display: table;
 }
+
 
 #nav a {
     font-weight: bold;
@@ -120,11 +123,26 @@ body::-webkit-scrollbar {
     margin: 0;
 }
 .nav-link {
-    margin-left: 20px;
     font-size: 18px;
     text-decoration: none;
     transition: transform 250ms ease-in-out;
+    vertical-align: middle;
+    /*border: 1px solid #000000;*/
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 20px;
 }
+
+/*.nav-link_about {
+    font-size: 18px;
+    text-decoration: none;
+    transition: transform 250ms ease-in-out;
+    vertical-align: middle;
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 10px;
+}*/
+
 
 .nav-link:hover {
 	transform: scale(1.1);
