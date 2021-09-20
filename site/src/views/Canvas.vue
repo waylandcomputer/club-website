@@ -11,12 +11,13 @@ export default {
     const script = (p5) => {
       let particles = [];
       let title = "";
-      let a = 10;
+      let a ;
       let aDir = 0; //Change to add a bit of animation h
       let typeBar;
 
       p5.setup = function () {
         p5.createCanvas(window.innerWidth, window.innerHeight);
+        a = p5.width/90;
         typeBar = {
           x: p5.width / 2 + p5.width / 100,
           y: p5.height / 2.5 - p5.width / 18,
@@ -72,7 +73,7 @@ export default {
             typeBar.x = p5.width / 2 + p5.width / 100;
             typeBar.y = p5.height / 2.5 + p5.width / 6.5;
           } else {
-            typeBar.x += p5.width / 21.5;
+            typeBar.x += p5.width / 20;
           }
         }
         if (typingIndex == finalTitle.length) {
