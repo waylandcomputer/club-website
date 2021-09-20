@@ -38,15 +38,17 @@
 
 <style scoped>
 .member-wrapper {
-    background-color: white;
+    background-color:#ffbc57;
     border-radius: 5px;
-    border: 1px solid #dfe3e8;
     box-sizing: border-box;
     width: 250px;
     cursor: pointer;
     transition: all 0.25s ease;
 }
 
+img {
+    border-radius: 5px;
+}
 .member-wrapper:hover {
     transform: scale(1.1, 1.1);
 }
