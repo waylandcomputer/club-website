@@ -4,20 +4,14 @@
 
 <script>
 import P5 from "p5"; // Package from npm
-import Inconsolata from "./fonts/Inconsolata.otf";
 
 export default {
   name: "App",
   mounted() {
     const script = (p5) => {
-      let myFont;
       let particles = [];
       let a = 10;
       let aDir = 0; //Change to add a bit of animation h
-
-      p5.preload = function () {
-        myFont = p5.loadFont(Inconsolata);
-      };
 
       p5.setup = function () {
         p5.createCanvas(window.innerWidth, window.innerHeight);
