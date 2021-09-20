@@ -39,9 +39,9 @@ export default {
         for (var i = 0; i < a; i++) {
           p5.fill(17 + (255 / a) * i, 17 + (145 / a) * i, 17 + (62 / a) * i);
           p5.text(
-            "CS CLUB",
+            "waylnad\ncs club",
             p5.width / 2 + i - a / 2,
-            p5.height / 2 + i - a / 2
+            p5.height / 2.5 + i - a / 2.5
           );
         }
 
