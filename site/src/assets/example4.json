@@ -135,7 +135,7 @@
     "fname": "Annie", 
     "grade": "10", 
     "id": 6, 
-    "image": "template.jpg", 
+    "image": "Annie.jpg", 
     "lname": "Long", 
     "position": "M"
   }, 
@@ -181,7 +181,7 @@
     "fname": "Akash", 
     "grade": "12", 
     "id": 9, 
-    "image": "template.jpg", 
+    "image": "Akash.jpg", 
     "lname": "Bhukhanwala", 
     "position": "M"
   }, 
@@ -192,7 +192,7 @@
     "fname": "Kevin", 
     "grade": "11", 
     "id": 10, 
-    "image": "template.jpg", 
+    "image": "KevinLee.jpg", 
     "lname": "Lee", 
     "position": "M"
   }, 
@@ -214,7 +214,7 @@
     "fname": "Carson", 
     "grade": "10", 
     "id": 12, 
-    "image": "carson.jpg", 
+    "image": "Carson.jpg", 
     "lname": "Boyer", 
     "position": "M"
   }, 
@@ -236,7 +236,7 @@
     "fname": "Ayush", 
     "grade": "10", 
     "id": 14, 
-    "image": "template.jpg", 
+    "image": "Ayush.jpg", 
     "lname": "Kumar", 
     "position": "M"
   }, 
@@ -247,7 +247,7 @@
     "fname": "Michael", 
     "grade": "10", 
     "id": 15, 
-    "image": "template.jpg", 
+    "image": "Michael.jpg", 
     "lname": "Wightman", 
     "position": "M"
   }, 
@@ -258,7 +258,7 @@
     "fname": "Ben", 
     "grade": "11", 
     "id": 16, 
-    "image": "template.jpg", 
+    "image": "Ben.jpg", 
     "lname": "Stahl", 
     "position": "M"
   }, 
