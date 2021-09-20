@@ -125,10 +125,6 @@ export default {
           p5.fill(255, 193, 79);
           p5.stroke(255, 193, 79);
           p5.strokeWeight(this.size / 4);
-          //let distFromMid = this.dist(
-          //  this.position,
-          //  p5.createVector(p5.width / 2, p5.height / 2)
-          //);
           p5.ellipse(this.position.x, this.position.y, this.size, this.size);
 
           let nearest = particles[0];
