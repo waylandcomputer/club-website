@@ -7,7 +7,7 @@
 		<div class="overlay"></div>
 		<div class="inner">
 			<h2 class="title">Reboothacks</h2>
-            <h3 class="date">--- 2021 - PRESENT ---</h3>
+            <h3 class="date">--- 2021 ---</h3>
             <h3 class="subtitle">Our hackathon oranization, established in 2021. Our team not only organizes hackathons, but is actively building the next generation of high school tech events in New England and beyond.
             </h3>
 			<div class="empty"></div>
