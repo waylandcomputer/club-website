@@ -3,11 +3,11 @@
     "contact_list": [
       {
         "icon": "fab fa-linkedin", 
-        "link": "https://www.linkedin.com/in/andrew-boyer-1771791b0"
+        "link": "https://www.linkedin.com/in/asboyer"
       }, 
       {
         "icon": "fab fa-github", 
-        "link": "https://github.com/asboyer2"
+        "link": "https://github.com/asboyer"
       }, 
       {
         "icon": "fab fa-spotify", 
@@ -26,6 +26,54 @@
     "image": "Andrew.png", 
     "lname": "Boyer", 
     "position": "P"
+  },  
+  {
+    "contact_list": [
+      {
+        "icon": "fa fa-envelope", 
+        "link": "mailto: ericxie6@gmail.com"
+      }, 
+      {
+        "icon": "fab fa-instagram", 
+        "link": "https://www.instagram.com/ericxie_zz/"
+      }, 
+      {
+        "icon": "fab fa-github", 
+        "link": "https://github.com/ericx1e"
+      }, 
+      {
+        "icon": "fab fa-spotify", 
+        "link": "https://open.spotify.com/user/ericxxie?si=sCJdKbxVQVWEho6fVYAPng"
+      }
+    ], 
+    "created_at": "Mon, 20 Sep 2021 01:56:15 GMT", 
+    "description": "Praesent egestas fermentum felis, et malesuada odio convallis feugiat. Curabitur convallis lacus vitae feugiat consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse luctus nibh vitae neque gravida, id laoreet nulla faucibus. Nulla ultrices tellus nisi, at maximus lorem hendrerit et. Sed vehicula non dui id tincidunt. Proin quis sodales sem, vitae accumsan elit. Pellentesque eros ante, hendrerit id dapibus id, tempor in nibh. Pellentesque euismod vitae dui non mollis. Vestibulum sollicitudin tortor et leo laoreet mollis. Aenean aliquam augue sit amet nibh hendrerit aliquam. Ut laoreet massa non nisi ornare, vel tincidunt tellus euismod. Aliquam vestibulum mattis lectus, rutrum blandit libero congue ac. Vivamus et ante vitae orci faucibus posuere nec at lorem.", 
+    "fname": "Eric", 
+    "grade": "12", 
+    "id": 4, 
+    "image": "eric.jpg", 
+    "lname": "Xie", 
+    "position": "VP"
+  },
+  {
+    "contact_list": [
+      {
+        "icon": "fa fa-envelope", 
+        "link": "mailto: kevin_zhao@student.waylandps.org"
+      }, 
+      {
+        "icon": "fab fa-github", 
+        "link": "https://github.com/Kevin-Zhao-Github"
+      }
+    ], 
+    "created_at": "Mon, 20 Sep 2021 01:56:15 GMT", 
+    "description": "Sed sed mi nec leo faucibus dictum quis eget nulla. Vivamus consectetur magna lobortis tellus efficitur, id varius urna consectetur. Morbi vitae leo id ex gravida interdum id ac turpis. Quisque quis ultricies nibh. Nam vel lectus et quam elementum tempor sed at odio. Fusce placerat ipsum in fermentum tincidunt. Mauris ultrices, quam quis ullamcorper tincidunt, velit justo interdum massa, vel ultricies leo justo pretium nisi.", 
+    "fname": "Kevin", 
+    "grade": "12", 
+    "id": 5, 
+    "image": "kevin.png", 
+    "lname": "Zhao", 
+    "position": "VP"
   }, 
   {
     "contact_list": [
@@ -70,55 +118,8 @@
     "image": "Brendan.jpg", 
     "lname": "Shen", 
     "position": "M"
-  }, 
-  {
-    "contact_list": [
-      {
-        "icon": "fa fa-envelope", 
-        "link": "mailto: ericxie6@gmail.com"
-      }, 
-      {
-        "icon": "fab fa-instagram", 
-        "link": "https://www.instagram.com/ericxie_zz/"
-      }, 
-      {
-        "icon": "fab fa-github", 
-        "link": "https://github.com/ericx1e"
-      }, 
-      {
-        "icon": "fab fa-spotify", 
-        "link": "https://open.spotify.com/user/ericxxie?si=sCJdKbxVQVWEho6fVYAPng"
-      }
-    ], 
-    "created_at": "Mon, 20 Sep 2021 01:56:15 GMT", 
-    "description": "Praesent egestas fermentum felis, et malesuada odio convallis feugiat. Curabitur convallis lacus vitae feugiat consequat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse luctus nibh vitae neque gravida, id laoreet nulla faucibus. Nulla ultrices tellus nisi, at maximus lorem hendrerit et. Sed vehicula non dui id tincidunt. Proin quis sodales sem, vitae accumsan elit. Pellentesque eros ante, hendrerit id dapibus id, tempor in nibh. Pellentesque euismod vitae dui non mollis. Vestibulum sollicitudin tortor et leo laoreet mollis. Aenean aliquam augue sit amet nibh hendrerit aliquam. Ut laoreet massa non nisi ornare, vel tincidunt tellus euismod. Aliquam vestibulum mattis lectus, rutrum blandit libero congue ac. Vivamus et ante vitae orci faucibus posuere nec at lorem.", 
-    "fname": "Eric", 
-    "grade": "12", 
-    "id": 4, 
-    "image": "eric.jpg", 
-    "lname": "Xie", 
-    "position": "VP"
-  }, 
-  {
-    "contact_list": [
-      {
-        "icon": "fa fa-envelope", 
-        "link": "mailto: kevin_zhao@student.waylandps.org"
-      }, 
-      {
-        "icon": "fab fa-github", 
-        "link": "https://github.com/Kevin-Zhao-Github"
-      }
-    ], 
-    "created_at": "Mon, 20 Sep 2021 01:56:15 GMT", 
-    "description": "Sed sed mi nec leo faucibus dictum quis eget nulla. Vivamus consectetur magna lobortis tellus efficitur, id varius urna consectetur. Morbi vitae leo id ex gravida interdum id ac turpis. Quisque quis ultricies nibh. Nam vel lectus et quam elementum tempor sed at odio. Fusce placerat ipsum in fermentum tincidunt. Mauris ultrices, quam quis ullamcorper tincidunt, velit justo interdum massa, vel ultricies leo justo pretium nisi.", 
-    "fname": "Kevin", 
-    "grade": "12", 
-    "id": 5, 
-    "image": "kevin.png", 
-    "lname": "Zhao", 
-    "position": "VP"
-  }, 
+  },
+ 
   {
     "contact_list": [
       {
@@ -128,10 +129,6 @@
       {
         "icon": "fab fa-instagram", 
         "link": "https://www.instagram.com/annielongyt/"
-      }, 
-      {
-        "icon": "fab fa-tiktok", 
-        "link": "https://vm.tiktok.com/tnJR1e/"
       }, 
       {
         "icon": "fa fa-envelope", 
@@ -324,7 +321,7 @@
       }, 
       {
         "icon": "fab fa-github", 
-        "link": "https://github.com/CptCranJuice"
+        "link": "https://github.com/thevolt6"
       }
     ], 
     "created_at": "Mon, 20 Sep 2021 01:56:15 GMT", 
@@ -348,7 +345,7 @@
       }, 
       {
         "icon": "fab fa-github", 
-        "link": "https://github.com/thevolt6"
+        "link": "https://github.com/CptCranJuice"
       }
     ], 
     "created_at": "Mon, 20 Sep 2021 01:56:15 GMT", 

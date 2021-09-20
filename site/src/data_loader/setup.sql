@@ -112,11 +112,11 @@ INSERT INTO contacts (link, icon, member) VALUES ('https://github.com/sammmmmc',
 
 INSERT INTO contacts (link, icon, member) VALUES ('mailto: benjamin_stahl@student.waylandps.org', 'fa fa-envelope', 16);
 INSERT INTO contacts (link, icon, member) VALUES ('https://instagram.com/benastahl', 'fab fa-instagram', 16);
-INSERT INTO contacts (link, icon, member) VALUES ('https://github.com/CptCranJuice', 'fab fa-github', 16);
+INSERT INTO contacts (link, icon, member) VALUES ('https://github.com/thevolt6', 'fab fa-github', 16);
 
 INSERT INTO contacts (link, icon, member) VALUES ('mailto: ayaan_rashid@student.waylandps.org', 'fa fa-envelope', 17);
 INSERT INTO contacts (link, icon, member) VALUES ('https://www.instagram.com/cptcranjuice/', 'fab fa-instagram', 17);
-INSERT INTO contacts (link, icon, member) VALUES ('https://github.com/thevolt6', 'fab fa-github', 17);
+INSERT INTO contacts (link, icon, member) VALUES ('https://github.com/CptCranJuice', 'fab fa-github', 17);
 
 INSERT INTO languages (language, member) VALUES ('Bash', 1);
 INSERT INTO languages (language, member) VALUES ('Java', 1);
