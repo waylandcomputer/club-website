@@ -1,7 +1,7 @@
 <template>
     <div class="members">
         <h1>
-        Current Members
+        current members
         </h1>
         <div class="members-div">
             <div class="member-grid">
@@ -89,9 +89,6 @@ h1 {
 /*      -webkit-text-stroke-width: 5px;
   -webkit-text-stroke-color: #111;*/
 }
-
-
-
 
 .members {
     text-align: center;

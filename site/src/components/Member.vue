@@ -3,7 +3,7 @@
         <img v-bind:src="require(`../assets/people/${image}`)" style="width: 100%" />
         <figcaption class="member-text">
             <h4>{{ name }}</h4>
-            <h5>[{{ position=="M"?"Member":position=="P"?"President":"Vice President"}}]</h5>
+            <h5>[{{ position=="M"?"member":position=="P"?"president":"vice president"}}]</h5>
             <h6>{{ grade }}th grade</h6>
             <span v-for="contact in this.contact_list" v-bind:key="contact.id" class="contact-list">
                 <a v-bind:href="contact.link" target="_blank"><i v-bind:class="contact.icon + ' fa-lg'"
@@ -74,6 +74,8 @@ img {
 h6 {
     margin: 5px;
     margin-bottom: 12px;
+    text-transform: lowercase;
+
 }
 .contact-list {
     padding: 5px;
@@ -83,9 +85,12 @@ h6 {
 h4 {
     font-size: 15px;
     margin-bottom: 5px;
+    text-transform: lowercase;
 }
 h6 {
     font-size: 12px;
+    text-transform: lowercase;
+
 }
 
 </style>

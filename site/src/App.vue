@@ -4,9 +4,9 @@
         <router-link to="/"
         ><img src="./assets/csclublogo.png" alt="club logo" class="logo"
         /></router-link>
-        <router-link style="margin-left: 10px" to="/about" class="nav-link">About</router-link>
-        <router-link to="/members" id="member-link" class="nav-link">Members</router-link>
-        <router-link to="/projects" class="nav-link">Projects</router-link>
+        <router-link style="margin-left: 10px" to="/about" class="nav-link">about</router-link>
+        <router-link to="/members" id="member-link" class="nav-link">members</router-link>
+        <router-link to="/projects" class="nav-link">projects</router-link>
         <!-- <router-link to="/signup" class="nav-link">Sign Up</router-link> -->
 	</div>
 	<body>
