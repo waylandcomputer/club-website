@@ -5,7 +5,7 @@
         ><img src="./assets/csclublogo.png" alt="club logo" class="logo"
         /></router-link>
         <router-link style="margin-left: 10px" to="/about" class="nav-link">About</router-link>
-        <router-link to="/members" class="nav-link">Members</router-link>
+        <router-link to="/members" id="member-link" class="nav-link">Members</router-link>
         <router-link to="/projects" class="nav-link">Projects</router-link>
         <!-- <router-link to="/signup" class="nav-link">Sign Up</router-link> -->
 	</div>
@@ -30,6 +30,11 @@
 	</footer>
 </div>
 </template>
+
+
+<script>
+
+</script>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:wght@100&display=swap");
@@ -70,7 +75,7 @@ body::-webkit-scrollbar {
 
 #type {
     margin-left: 5px;
-    border-right: 0.15em solid;
+    border-right: 0.05em solid;
     animation: caret 1s steps(1) infinite;
     color: #111;
 }
