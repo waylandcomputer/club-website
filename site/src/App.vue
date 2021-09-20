@@ -39,12 +39,22 @@
 
 html {background-color: #111}
 
+
+
 body {
     display: flex;
     flex-direction: column;
+    
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
     /*min-height: 50vh;*/
     /*the above is*/
 }
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
 #app {
     font-family: monospace;
     -webkit-font-smoothing: antialiased;
