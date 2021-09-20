@@ -39,13 +39,13 @@ export default {
         });
 
         p5.textSize(p5.width / 6);
-        p5.textFont(myFont);
+        p5.textFont("Monospace");
         p5.noStroke();
         p5.textAlign(p5.CENTER);
         for (var i = 0; i < a; i++) {
-          p5.fill(255 - 1 * i, 193 - 5 * i, 79 - 5 * i);
+          p5.fill(17 + (255 / a) * i, 17 + (145 / a) * i, 17 + (62 / a) * i);
           p5.text(
-            "CS*CLUB",
+            "CS CLUB",
             p5.width / 2 + i - a / 2,
             p5.height / 2 + i - a / 2
           );
@@ -119,6 +119,14 @@ export default {
             nearest.position.x - nearest.velocity.x + p5.random(5),
             nearest.position.y - nearest.velocity.y + p5.random(5)
           );
+
+          // let random = particles[Math.floor(p5.random(particles.length))];
+          // p5.line(
+          //   this.position.x + p5.random(5),
+          //   this.position.y + p5.random(5),
+          //   random.position.x,
+          //   random.position.y
+          // );
         };
         this.lerp = function (start, end, amt) {
           return (1 - amt) * start + amt * end;
@@ -135,13 +143,13 @@ export default {
           this.position.add(this.velocity);
           this.velocity.add(
             p5.createVector(
-              -(this.position.x - p5.width / 2) / p5.width,
-              -(this.position.y - p5.height / 2) / p5.height
+              -(this.position.x - p5.width / 2) / p5.width / 2,
+              -(this.position.y - p5.height / 2) / p5.height / 2
             )
           );
           this.acceleration = this.acceleration.rotate(p5.random(0, 2 * p5.PI));
           this.velocity.add(this.acceleration);
-          this.velocity.limit(20);
+          this.velocity.limit(10);
           // this.velocity.limit(2);
         };
       }
