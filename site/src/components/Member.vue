@@ -1,32 +1,39 @@
 <template>
     <div class="member-wrapper">
         <img v-bind:src="require(`../assets/people/${image}`)" style="width: 100%" />
-        <div class="member-text">
-              {{ name }}
-              <br />
-              {{ grade }}
-        </div>
+        <figcaption class="member-text">
+            <h5>{{ name }}</h5>
+            <h6>{{ grade }}</h6>
+            <span v-for="contact in this.contact_list" v-bind:key="contact.id" class="contact-list">
+                <a v-bind:href="contact.link" target="_blank"><i v-bind:class="contact.icon + ' fa-lg'"
+                            style="color: black" aria-hidden="true"></i></a>
+            </span>
+        </figcaption>
     </div>
 </template>
 
 <script>
-export default {
-    name: "Member",
-    props: {
-        name: {
-            type: String,
-            required: true,
+    export default {
+        name: "Member",
+        props: {
+            name: {
+                type: String,
+                required: true,
+            },
+            image: {
+                type: String,
+                required: true,
+            },
+            grade: {
+                type: String,
+                required: true,
+            },
+            contact_list: {
+                type: Array,
+                required: true,
+            },
         },
-        image: {
-            type: String,
-            required: true,
-        },
-        grade: {
-            type: String,
-            required: true,
-        },
-    },
-};
+    };
 </script>
 
 <style scoped>
@@ -47,4 +54,12 @@ export default {
 .member-text {
     padding: 20px;
 }
+h6 {
+    margin: 5px;
+}
+.contact-list {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
 </style>
