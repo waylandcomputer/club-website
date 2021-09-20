@@ -67,7 +67,7 @@ body::-webkit-scrollbar {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: rgb(165, 165, 165);
-    background-color: rgb(39, 37, 37);
+    background-color: rgb(17, 17, 17);
     margin: 0;
     padding: 0;
     height: 100%;
@@ -89,7 +89,7 @@ body::-webkit-scrollbar {
 #nav {
     padding: 0px;
     text-align: left;
-    background-color: black;
+    background-color: #111;
 }
 
 #nav a {

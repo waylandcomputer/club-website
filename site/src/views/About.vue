@@ -67,6 +67,7 @@ figcaption {
 }
 
 .about {
+    background-color: rgb(39, 37, 37);
     text-align: center;
     padding-top: 50px;
     padding-bottom: 50px;

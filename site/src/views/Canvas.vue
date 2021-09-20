@@ -22,7 +22,7 @@ export default {
           x: p5.width / 2 + p5.width / 100,
           y: p5.height / 2.5 - p5.width / 18,
         };
-        for (var i = 0; i < 5; i++) {
+        for (let i = 0; i < 5; i++) {
           particles.push(
             new Particle(p5.random(0, p5.width), p5.random(0, p5.height))
           );
@@ -30,20 +30,25 @@ export default {
       };
 
       p5.draw = function () {
-        p5.background(51);
-        p5.fill(0);
-        p5.textSize(20);
-        // p5.text(Math.floor(p5.frameRate()), 100, 100);
         particles.forEach((particle) => {
           particle.show();
           particle.update();
         });
+        p5.rectMode(p5.CORNER);
+        p5.noStroke();
+        for(let i = -2; i < p5.height; i+=2) {
+          p5.fill(17 + 100-Math.abs(100-100*(i/(p5.height/2))), 200);
+          p5.rect(0, i, p5.width, 2);
+        } 
+        p5.fill(0);
+        p5.textSize(20);
+        // p5.text(Math.floor(p5.frameRate()), 100, 100);
 
         p5.textSize(p5.width / 6);
         p5.textFont("Monospace");
         p5.noStroke();
         p5.textAlign(p5.CENTER);
-        for (var i = 0; i < a; i++) {
+        for (let i = 0; i < a; i++) {
           p5.fill(17 + (255 / a) * i, 17 + (145 / a) * i, 17 + (62 / a) * i);
           p5.text(
             title,
@@ -99,9 +104,7 @@ export default {
           );
         });
 
-        if (particles.length < 50) {
-          particles.push(new Particle(p5.mouseX, p5.mouseY));
-        }
+        particles.push(new Particle(p5.mouseX, p5.mouseY));
       };
 
       function Particle(x, y) {
@@ -132,7 +135,7 @@ export default {
           if (this.dist(this.position, nearest.position) == 0) {
             nearest = particles[1];
           }
-          for (var i = 1; i < particles.length; i++) {
+          for (let i = 1; i < particles.length; i++) {
             if (
               this.dist(this.position, particles[i].position) != 0 &&
               this.dist(this.position, particles[i].position) <
