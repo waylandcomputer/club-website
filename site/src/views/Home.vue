@@ -2,7 +2,6 @@
   <div id="app">
     <Canvas />
   </div>
-  <br>
 </template>
 
 <script>
