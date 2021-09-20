@@ -7,6 +7,7 @@
         <router-link style="margin-left: 10px" to="/about" class="nav-link">About</router-link>
         <router-link to="/members" class="nav-link">Members</router-link>
         <router-link to="/projects" class="nav-link">Projects</router-link>
+        <!-- <router-link to="/signup" class="nav-link">Sign Up</router-link> -->
 	</div>
 	<body>
         <router-view />
@@ -39,12 +40,22 @@
 
 html {background-color: #111}
 
+
+
 body {
     display: flex;
     flex-direction: column;
+    
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
     /*min-height: 50vh;*/
     /*the above is*/
 }
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
 #app {
     font-family: monospace;
     -webkit-font-smoothing: antialiased;
