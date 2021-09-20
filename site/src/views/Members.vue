@@ -49,6 +49,13 @@
 
 <style scoped>
 
+h1 {
+    font-size: 100px;
+    color: #FFBC57;
+      -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: #111;
+}
+
 .members {
     text-align: center;
     padding-top: 50px;
@@ -72,4 +79,13 @@
     margin: 0 auto;
     color: black;
 }
+
+@media(max-width: 860px) {
+    h1 {
+        font-size: 50px;
+      -webkit-text-stroke-width: 1px;
+
+    }
+}
+
 </style>
