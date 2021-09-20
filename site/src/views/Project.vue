@@ -62,7 +62,8 @@ name: "Projects",
         pageDots: false,
         autoPlay: true,
         freeScroll: false,
-        wrapAround: true
+        wrapAround: true,
+        arrowShape: 'M 0,50 L 60,00 L 50,30 L 80,30 L 80,70 L 50,70 L 60,100 Z'
         
       }
     }
@@ -131,7 +132,7 @@ body {
 }
 .hero-slider {
     width: 100%;
-    height: 82vh;
+    height: 100vh;
     overflow: hidden;
 }
 .hero-slider .carousel-cell {

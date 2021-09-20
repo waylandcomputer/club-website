@@ -7,7 +7,7 @@
             <h6>{{ grade }}th grade</h6>
             <span v-for="contact in this.contact_list" v-bind:key="contact.id" class="contact-list">
                 <a v-bind:href="contact.link" target="_blank"><i v-bind:class="contact.icon + ' fa-lg'"
-                            style="color: #111" aria-hidden="true"></i></a>
+                            style="color: #111" aria-hidden="true" id="link"></i></a>
             </span>
         </figcaption>
     </div>
@@ -51,11 +51,21 @@
     transition: all 0.25s ease;
 }
 
+.member-wrapper:hover {
+    transform: scale(1.2, 1.1);
+
+}
+
+#link {
+    transition: all 0.25s ease;
+}
+
 img {
     border-radius: 5px;
 }
-.member-wrapper:hover {
-    transform: scale(1.1, 1.1);
+
+#link:hover {
+    transform: scale(1.2, 1.2);
 }
 
 .member-text {

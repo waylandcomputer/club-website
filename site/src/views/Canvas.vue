@@ -26,7 +26,7 @@ export default {
         p5.background(51);
         p5.fill(0);
         p5.textSize(20);
-        p5.text(Math.floor(p5.frameRate()), 100, 100);
+        // p5.text(Math.floor(p5.frameRate()), 100, 100);
         particles.forEach((particle) => {
           particle.show();
           particle.update();
