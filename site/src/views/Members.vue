@@ -8,6 +8,7 @@
                         :name="user.fname + ' ' + user.lname"
                         :image="user.image"
                         :grade="user.grade"
+                        :position="user.position"
                         :contact_list="user.contact_list"
                     />
                 </div>
@@ -69,5 +70,6 @@
 .member {
     position: relative;
     margin: 0 auto;
+    color: black;
 }
 </style>

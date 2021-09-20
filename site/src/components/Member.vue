@@ -2,11 +2,12 @@
     <div class="member-wrapper">
         <img v-bind:src="require(`../assets/people/${image}`)" style="width: 100%" />
         <figcaption class="member-text">
-            <h5>{{ name }}</h5>
-            <h6>{{ grade }}</h6>
+            <h4>{{ name }}</h4>
+            <h5>- {{ position=="M"?"Member":position=="P"?"President":"Vice President"}} -</h5>
+            <h6>{{ grade }}th grade</h6>
             <span v-for="contact in this.contact_list" v-bind:key="contact.id" class="contact-list">
                 <a v-bind:href="contact.link" target="_blank"><i v-bind:class="contact.icon + ' fa-lg'"
-                            style="color: black" aria-hidden="true"></i></a>
+                            style="color: #111" aria-hidden="true"></i></a>
             </span>
         </figcaption>
     </div>
@@ -28,6 +29,10 @@
                 type: String,
                 required: true,
             },
+            position: {
+                type: String,
+                required: true,
+            },
             contact_list: {
                 type: Array,
                 required: true,
@@ -38,15 +43,17 @@
 
 <style scoped>
 .member-wrapper {
-    background-color: white;
+    background-color:#ffbc57;
     border-radius: 5px;
-    border: 1px solid #dfe3e8;
     box-sizing: border-box;
     width: 250px;
     cursor: pointer;
     transition: all 0.25s ease;
 }
 
+img {
+    border-radius: 5px;
+}
 .member-wrapper:hover {
     transform: scale(1.1, 1.1);
 }
@@ -56,10 +63,19 @@
 }
 h6 {
     margin: 5px;
+    margin-bottom: 12px;
 }
 .contact-list {
     padding: 5px;
     margin-bottom: 5px;
+}
+
+h4 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+h6 {
+    font-size: 12px;
 }
 
 </style>
