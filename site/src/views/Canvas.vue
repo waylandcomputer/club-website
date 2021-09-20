@@ -10,11 +10,17 @@ export default {
   mounted() {
     const script = (p5) => {
       let particles = [];
+      let title = "";
       let a = 10;
       let aDir = 0; //Change to add a bit of animation h
+      let typeBar;
 
       p5.setup = function () {
         p5.createCanvas(window.innerWidth, window.innerHeight);
+        typeBar = {
+          x: p5.width / 2 + p5.width / 100,
+          y: p5.height / 2.5 - p5.width / 18,
+        };
         for (var i = 0; i < 5; i++) {
           particles.push(
             new Particle(p5.random(0, p5.width), p5.random(0, p5.height))
@@ -39,7 +45,7 @@ export default {
         for (var i = 0; i < a; i++) {
           p5.fill(17 + (255 / a) * i, 17 + (145 / a) * i, 17 + (62 / a) * i);
           p5.text(
-            "wayland\ncs club",
+            title,
             p5.width / 2 + i - a / 2,
             p5.height / 2.5 + i - a / 2.5
           );
@@ -49,7 +55,34 @@ export default {
         if (a < 10 || a > 20) {
           aDir *= -1;
         }
+
+        typing();
       };
+
+      let typingIndex = 0;
+      let finalTitle = "wayland\ncs club";
+      function typing() {
+        p5.rectMode(p5.CENTER);
+        p5.fill(255, 155, 72);
+        if (typingIndex < finalTitle.length && p5.frameCount % 10 == 0) {
+          title += finalTitle.charAt(typingIndex);
+          typingIndex++;
+          p5.fill(255, 155, 72);
+          if (typingIndex == 7 || typingIndex == 8) {
+            typeBar.x = p5.width / 2 + p5.width / 100;
+            typeBar.y = p5.height / 2.5 + p5.width / 6.5;
+          } else {
+            typeBar.x += p5.width / 21.5;
+          }
+        }
+        if (typingIndex == finalTitle.length) {
+          if (p5.frameCount % 60 < 30) {
+            p5.noFill();
+          }
+        }
+
+        p5.rect(typeBar.x, typeBar.y, p5.width / 180, p5.width / 6);
+      }
 
       p5.keyPressed = function () {};
 
