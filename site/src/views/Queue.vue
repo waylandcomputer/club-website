@@ -69,6 +69,8 @@ h1 {
     grid-row-gap: 50px;
     grid-column-gap: 50px;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 .members-div {
     padding: 50px;
