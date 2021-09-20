@@ -68,6 +68,19 @@ body::-webkit-scrollbar {
     height: 100%;
 }
 
+#type {
+    margin-left: 5px;
+    border-right: 0.15em solid;
+    animation: caret 1s steps(1) infinite;
+    color: #111;
+}
+
+@keyframes caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
 #nav {
     padding: 0px;
     text-align: left;
