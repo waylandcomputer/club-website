@@ -96,7 +96,7 @@ figcaption {
     margin-top: 10px;
     width: 75%;
     border-radius: 25px;
-  background-image: url(../assets/club_pic.png), radial-gradient(#FFBC57, #000000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.1) 2.5px, transparent 5px);
+  background-image: url(../assets/club_pic.png), radial-gradient(#D3D3D3, #000000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.3) 2.5px, transparent 5px);
   background-size: cover;
   background-position: center;
   background-blend-mode: overlay;
@@ -117,7 +117,7 @@ figcaption {
     margin-top: 30px;
     width: 75%;
     border-radius: 25px;
-  background-image: url(../assets/image.png), radial-gradient(#FFBC57, #000000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.1) 2.5px, transparent 5px);
+  background-image: url(../assets/image.png), radial-gradient(#D3D3D3, #000000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.3) 2.5px, transparent 5px);
   background-size: cover;
   background-position: center;
   background-blend-mode: overlay;
@@ -138,7 +138,7 @@ figcaption {
     margin-top: 30px;
     width: 75%;
     border-radius: 25px;
-  background-image: url(../assets/image2.png), radial-gradient(#FFBC57, #000000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.1) 2.5px, transparent 5px);
+  background-image: url(../assets/image2.png), radial-gradient(#D3D3D3, #000000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.3) 2.5px, transparent 5px);
   background-size: cover;
   background-position: center;
   background-blend-mode: overlay;
@@ -167,41 +167,44 @@ div {
 
 @keyframes animate {
   0% {
-    background-image: url(../assets/club_pic.png), radial-gradient(#FFBC57, #000000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.1) 1.5px, transparent 5px);
+    background-image: url(../assets/club_pic.png), radial-gradient(#D3D3D3
+, #000000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.3) 1.5px, transparent 5px);
   }
 
   50% {
-    background-image: url(../assets/club_pic.png), radial-gradient(#FFBC57, #000000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.1) 4.5px, transparent 5px);
+    background-image: url(../assets/club_pic.png), radial-gradient(#D3D3D3
+, #000000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.3) 4.5px, transparent 5px);
   }
 100% {
-    background-image: url(../assets/club_pic.png), radial-gradient(#FFBC57, #000000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.1) 2.5px, transparent 5px);
+    background-image: url(../assets/club_pic.png), radial-gradient(#D3D3D3
+, #000000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.3) 2.5px, transparent 5px);
   }
 }
 
 
 @keyframes animate1 {
   0% {
-    background-image: url(../assets/image.png), radial-gradient(#FFBC57, #000000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.1) 1.5px, transparent 5px);
+    background-image: url(../assets/image.png), radial-gradient(#D3D3D3, #000000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.3) 1.5px, transparent 5px);
   }
 
   50% {
-    background-image: url(../assets/image.png), radial-gradient(#FFBC57, #000000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.1) 4.5px, transparent 5px);
+    background-image: url(../assets/image.png), radial-gradient(#D3D3D3, #000000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.3) 4.5px, transparent 5px);
   }
 100% {
-    background-image: url(../assets/image.png), radial-gradient(#FFBC57, #000000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.1) 2.5px, transparent 5px);
+    background-image: url(../assets/image.png), radial-gradient(#D3D3D3, #000000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.3) 2.5px, transparent 5px);
   }
 }
 
 @keyframes animate2 {
   0% {
-    background-image: url(../assets/image2.png), radial-gradient(#FFBC57, #000000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.1) 1.5px, transparent 5px);
+    background-image: url(../assets/image2.png), radial-gradient(#D3D3D3, #000000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.3) 1.5px, transparent 5px);
   }
 
   50% {
-    background-image: url(../assets/image2.png), radial-gradient(#FFBC57, #000000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.1) 4.5px, transparent 5px);
+    background-image: url(../assets/image2.png), radial-gradient(#D3D3D3, #000000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.3) 4.5px, transparent 5px);
   }
 100% {
-    background-image: url(../assets/image2.png), radial-gradient(#FFBC57, #000000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.1) 2.5px, transparent 5px);
+    background-image: url(../assets/image2.png), radial-gradient(#D3D3D3, #000000), repeating-linear-gradient(transparent 0, rgba(0, 0, 0, 0.3) 2.5px, transparent 5px);
   }
 }
 
