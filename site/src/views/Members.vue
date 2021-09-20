@@ -1,6 +1,8 @@
 <template>
     <div class="members">
-        <h1>Current Members</h1>
+        <h1>
+        current members
+        </h1>
         <div class="members-div">
             <div class="member-grid">
                 <div class="member" v-for="user in userData" v-bind:key="user.id">
@@ -45,6 +47,38 @@
             this.getData();
         },
     };
+
+// document.addEventListener('DOMContentLoaded', function(event){
+//     var dataText = ["Current Members"];
+
+//     function typeWriter(text, i, fnCallback) {
+//         if (i < (text.length)) {
+//          document.querySelector("h1").innerHTML = text.substring(0, i+1) +'<span id="type" aria-hidden="true"></span>';
+
+//           setTimeout(function() {
+//             typeWriter(text, i + 1, fnCallback)
+//           }, 150);
+//         }
+//         else if (typeof fnCallback == 'function') {
+//           setTimeout(fnCallback, 700);
+//         }
+//         }
+//         function StartTextAnimation(i) {
+//          if (typeof dataText[i] == 'undefined'){
+//             setTimeout(function() {
+//               StartTextAnimation(0);
+//             }, 20000000);
+//          }
+//         if (i < dataText[i].length) {
+//          typeWriter(dataText[i], 0, function(){
+//            StartTextAnimation(i + 1);
+//          });
+//         }
+//         }
+//         StartTextAnimation(0);
+// });
+
+
 </script>
 
 <style scoped>
@@ -52,8 +86,8 @@
 h1 {
     font-size: 100px;
     color: #FFBC57;
-      -webkit-text-stroke-width: 5px;
-  -webkit-text-stroke-color: #111;
+/*      -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: #111;*/
 }
 
 .members {
@@ -80,10 +114,10 @@ h1 {
     color: black;
 }
 
-@media(max-width: 860px) {
+@media(max-width: 900px) {
     h1 {
         font-size: 50px;
-      -webkit-text-stroke-width: 1px;
+      /*-webkit-text-stroke-width: 1px;*/
 
     }
 }

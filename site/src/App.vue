@@ -4,9 +4,9 @@
         <router-link to="/"
         ><img src="./assets/csclublogo.png" alt="club logo" class="logo"
         /></router-link>
-        <router-link style="margin-left: 10px" to="/about" class="nav-link">About</router-link>
-        <router-link to="/members" class="nav-link">Members</router-link>
-        <router-link to="/projects" class="nav-link">Projects</router-link>
+        <router-link style="margin-left: 10px" to="/about" class="nav-link">about</router-link>
+        <router-link to="/members" id="member-link" class="nav-link">members</router-link>
+        <router-link to="/projects" class="nav-link">projects</router-link>
         <!-- <router-link to="/signup" class="nav-link">Sign Up</router-link> -->
 	</div>
 	<body>
@@ -30,6 +30,11 @@
 	</footer>
 </div>
 </template>
+
+
+<script>
+
+</script>
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:wght@100&display=swap");
@@ -66,6 +71,19 @@ body::-webkit-scrollbar {
     margin: 0;
     padding: 0;
     height: 100%;
+}
+
+#type {
+    margin-left: 5px;
+    border-right: 0.05em solid;
+    animation: caret 1s steps(1) infinite;
+    color: #111;
+}
+
+@keyframes caret {
+    50% {
+        border-color: transparent;
+    }
 }
 
 #nav {

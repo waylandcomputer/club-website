@@ -7,7 +7,7 @@
 		<div class="overlay"></div>
 		<div class="inner">
 			<h2 class="title">Reboothacks</h2>
-            <h3 class="date">--- 2021 ---</h3>
+            <h3 class="date">cs club<br>--- 2021 ---</h3>
             <h3 class="subtitle">Our hackathon oranization, established in 2021. Our team not only organizes hackathons, but is actively building the next generation of high school tech events in New England and beyond.
             </h3>
 			<div class="empty"></div>
@@ -19,7 +19,7 @@
 		<div class="overlay"></div>
         <div class="inner">
             <h2 class="title">pico<span class="ctf">CTF</span></h2>
-            <h3 class="date">--- Spring 2021 ---</h3>
+            <h3 class="date">cs club<br>--- Spring 2021 ---</h3>
 
             <h3 class="subtitle">Members from our team actively compete in CMU's yearly cybersecurity competition. In the spring of 2021, one of our teams ("Wayland Juniors") finished 49th in the country amoung 2280 high school teams.
             </h3>
@@ -32,7 +32,7 @@
         <div class="overlay"></div>
         <div class="inner">
             <h2 class="title">USACO</h2>
-            <h3 class="date">--- Winter 2021 ---</h3>
+            <h3 class="date">cs club<br>--- Winter 2021 ---</h3>
             
             <h3 class="subtitle">Members in our club compete in the USA Computing Olympiad every year.
             </h3>
@@ -106,6 +106,8 @@ name: "Projects",
     margin-bottom: 40px;
     font-size: 20px;
     color: #111;
+    text-transform: lowercase;
+
 }
 
 
@@ -123,11 +125,10 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
+    top: 0px;
     bottom: 0;
     left: 0;
     right: 0;
-
     background: linear-gradient(to bottom, #FF914D, #111);
 }
 .hero-slider {
@@ -165,6 +166,8 @@ body {
     padding: 20px;
     border: 2px dashed #75E645;
     border-radius: 25px;
+    text-transform: lowercase;
+
 }
 .hero-slider .carousel-cell .inner .title {
     font-size: 8em;
@@ -176,7 +179,7 @@ body {
 .hero-slider .carousel-cell .inner .btn {
     border: 5px solid #111;
     padding: 14px 18px;
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-size: 0.8rem;
     letter-spacing: 3px;
     color: #fff;
