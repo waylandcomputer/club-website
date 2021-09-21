@@ -83,17 +83,6 @@ def load_data():
             # data[member.id] = member_info
             data.append(member_info)
 
-    # languages = Language.query.all()
-    # for language in languages:
-    #     language_info = language.__dict__
-    #     del language_info['_sa_instance_state']
-    #     data['languages'].append(language_info)
-    #
-    # contacts = Contact.query.all()
-    # for contact in contacts:
-    #     contact_info = contact.__dict__
-    #     del contact_info['_sa_instance_state']
-    #     data['contacts'].append(contact_info)
     return jsonify(data)
 
 
@@ -103,8 +92,6 @@ def load_data2():
     # data = {'members': [], 'contacts': []}
     members = Member.query.filter_by().all()
     for member in members:
-        print(member.created_at)
-        print(datetime.datetime(2021, 9, 20))
         if member.created_at >= datetime.datetime(2021, 9, 20):  # TODO: fix
             member_info = member.__dict__
             del member_info['_sa_instance_state']
@@ -121,15 +108,4 @@ def load_data2():
             # data[member.id] = member_info
             data.append(member_info)
 
-    # languages = Language.query.all()
-    # for language in languages:
-    #     language_info = language.__dict__
-    #     del language_info['_sa_instance_state']
-    #     data['languages'].append(language_info)
-    #
-    # contacts = Contact.query.all()
-    # for contact in contacts:
-    #     contact_info = contact.__dict__
-    #     del contact_info['_sa_instance_state']
-    #     data['contacts'].append(contact_info)
     return jsonify(data)
