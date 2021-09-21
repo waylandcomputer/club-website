@@ -110,6 +110,9 @@ INSERT INTO contacts (link, icon, member) VALUES ('https://github.com/TheCarsonB
 INSERT INTO contacts (link, icon, member) VALUES ('https://open.spotify.com/user/3db5ixjm0n68yrf71shqh10uk', 'fab fa-spotify', 13);
 INSERT INTO contacts (link, icon, member) VALUES ('https://github.com/sammmmmc', 'fab fa-github', 13);
 
+INSERT INTO contacts (link, icon, member) VALUES ('ayush_kumar@student.waylandps.org', 'fa fa-envelope', 14);
+INSERT INTO contacts (link, icon, member) VALUES ('https://github.com/akumar2006 ', 'fab fa-github', 14);
+
 INSERT INTO contacts (link, icon, member) VALUES ('mailto: benjamin_stahl@student.waylandps.org', 'fa fa-envelope', 16);
 INSERT INTO contacts (link, icon, member) VALUES ('https://instagram.com/benastahl', 'fab fa-instagram', 16);
 INSERT INTO contacts (link, icon, member) VALUES ('https://github.com/thevolt6', 'fab fa-github', 16);
