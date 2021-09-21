@@ -1,17 +1,17 @@
 <template>
     <div class="members">
-        <h1>
+<!--         <h1>
         pending members
-        </h1>
+        </h1> -->
         <div class="members-div">
             <div class="member-grid">
                 <table>
                     <tr>
-                        <th>Name</th>
-                        <th>Grade</th>
+                        <th>name</th>
+                        <th>grade</th>
                     </tr>
                     <tr v-for="user in userData" v-bind:key="user.id">
-                        <td>{{ user.fname }}</td>
+                        <td>{{ user.fname }} {{ user.lname }}</td>
                         <td>{{ user.grade }}</td>
                     </tr>
                 </table>
@@ -58,51 +58,73 @@ h1 {
 }
 
 table {
-    border-collapse: collapse;
+    /*border-collapse: collapse;*/
     width: 100%;
+    /*height: 100vh;*/
+    margin: 0 auto;
 }
+
+table, th, td {
+    border: 1px solid #FFBC57;
+
+}
+
 
 .members {
     text-align: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    margin: 0;
+    /*padding-top: 50px;*/
+    /*padding-bottom: 50px;*/
 }
 
-.member-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
-    max-width: 1500px;
-    grid-row-gap: 50px;
-    grid-column-gap: 50px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
+
 .members-div {
-    padding: 50px;
-    font-size: 2.5vw;
+    /*padding: 50px;*/
+    font-size: 20px;
 }
 
-.member {
-    position: relative;
-    margin: 0 auto;
-    color: black;
-}
 
 tr:nth-child(even) {
-    background-color: orange;
-    color: black;
+    background-color: #FFBC57;
+    color: #111;
 }
 
 tr:nth-child(odd) {
-    background-color: rgb(41, 50, 102);
+    background-color: rgb(39, 37, 37);
+    color: #FFBC57;
 }
 
-@media(max-width: 900px) {
-    h1 {
-        font-size: 50px;
-      /*-webkit-text-stroke-width: 1px;*/
 
+
+td {
+    text-transform: lowercase;
+    padding: 15px;
+}
+
+th {
+    color: #FF914D;
+    background-color: #111;
+    padding: 20px;
+    font-size: 30px;
+}
+
+@media(max-width: 1000px) {
+    th {
+        font-size: 2vw;
+    }
+
+    tr {
+        font-size: 2.5vw;
+    }
+}
+
+@media(max-width: 700px) {
+    th {
+        font-size: 2.5vw;
+    }
+
+    tr {
+        font-size: 3vw;
     }
 }
 
