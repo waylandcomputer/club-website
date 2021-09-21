@@ -1,7 +1,7 @@
 <template>
     <div class="members">
         <h1>
-        current members
+        pending members
         </h1>
         <div class="members-div">
             <div class="member-grid">
@@ -43,6 +43,7 @@
         created() {
             this.getData();
         },
+        bool: true
     };
 
 </script>
@@ -54,6 +55,11 @@ h1 {
     color: #FFBC57;
 /*      -webkit-text-stroke-width: 5px;
   -webkit-text-stroke-color: #111;*/
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
 }
 
 .members {
@@ -74,12 +80,22 @@ h1 {
 }
 .members-div {
     padding: 50px;
+    font-size: 2.5vw;
 }
 
 .member {
     position: relative;
     margin: 0 auto;
     color: black;
+}
+
+tr:nth-child(even) {
+    background-color: orange;
+    color: black;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(41, 50, 102);
 }
 
 @media(max-width: 900px) {
