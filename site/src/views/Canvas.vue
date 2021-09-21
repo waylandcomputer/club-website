@@ -15,7 +15,7 @@ export default {
       let a;
       let aDir = 0; //Change to add a bit of animation h
       let typeBar;
-      let selectedButton = 1;
+      let selectedButton = 2;
       let shiftPressed = false;
       let maxDist = 500;
 
