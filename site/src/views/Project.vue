@@ -32,13 +32,9 @@
               school teams.
             </h3>
             <div class="empty"></div>
-            <a
-              href="https://play.picoctf.org/events/34/scoreboards#35"
-              class="btn"
-              target="empty"
-              >Sping 2021 Scoreboard</a
-            >
+
           </div>
+            <a href="https://play.picoctf.org/events/34/scoreboards#35" class="btn" target="empty">Spring 2021 Scoreboard</a>
         </div>
 
         <div class="carousel-cell" id="slide-3">

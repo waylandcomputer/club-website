@@ -1,3 +1,4 @@
+import datetime
 import os
 
 from dotenv import load_dotenv
@@ -60,26 +61,65 @@ def process_signup():
     return "0"
 
 
-@app.route('/data/member_data', methods=['GET'])
+@app.route('/data/existing_member_data', methods=['GET'])
 def load_data():
     data = []
     # data = {'members': [], 'contacts': []}
-    members = Member.query.all()
+    members = Member.query.filter_by().all()
     for member in members:
-        member_info = member.__dict__
-        del member_info['_sa_instance_state']
-        contact_info = Contact.query.filter_by(member=member.id).all()
-        contact_list = []
-        for contact in contact_info:
-            contact_dict = contact.__dict__
-            del contact_dict['member']
-            del contact_dict['cid']
-            del contact_dict['_sa_instance_state']
-            contact_list.append(contact_dict)
+        if member.created_at <= datetime.datetime(2021, 9, 20):  # TODO: fix
+            member_info = member.__dict__
+            del member_info['_sa_instance_state']
+            contact_info = Contact.query.filter_by(member=member.id).all()
+            contact_list = []
+            for contact in contact_info:
+                contact_dict = contact.__dict__
+                del contact_dict['member']
+                del contact_dict['cid']
+                del contact_dict['_sa_instance_state']
+                contact_list.append(contact_dict)
 
-        member_info["contact_list"] = contact_list
-        # data[member.id] = member_info
-        data.append(member_info)
+            member_info["contact_list"] = contact_list
+            # data[member.id] = member_info
+            data.append(member_info)
+
+    # languages = Language.query.all()
+    # for language in languages:
+    #     language_info = language.__dict__
+    #     del language_info['_sa_instance_state']
+    #     data['languages'].append(language_info)
+    #
+    # contacts = Contact.query.all()
+    # for contact in contacts:
+    #     contact_info = contact.__dict__
+    #     del contact_info['_sa_instance_state']
+    #     data['contacts'].append(contact_info)
+    return jsonify(data)
+
+
+@app.route('/data/new_member_data', methods=['GET'])
+def load_data2():
+    data = []
+    # data = {'members': [], 'contacts': []}
+    members = Member.query.filter_by().all()
+    for member in members:
+        print(member.created_at)
+        print(datetime.datetime(2021, 9, 20))
+        if member.created_at >= datetime.datetime(2021, 9, 20):  # TODO: fix
+            member_info = member.__dict__
+            del member_info['_sa_instance_state']
+            contact_info = Contact.query.filter_by(member=member.id).all()
+            contact_list = []
+            for contact in contact_info:
+                contact_dict = contact.__dict__
+                del contact_dict['member']
+                del contact_dict['cid']
+                del contact_dict['_sa_instance_state']
+                contact_list.append(contact_dict)
+
+            member_info["contact_list"] = contact_list
+            # data[member.id] = member_info
+            data.append(member_info)
 
     # languages = Language.query.all()
     # for language in languages:

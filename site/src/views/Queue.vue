@@ -1,33 +1,30 @@
 <template>
     <div class="members">
         <h1>
-        current members
+        pending members
         </h1>
         <div class="members-div">
             <div class="member-grid">
-                <div class="member" v-for="user in userData" v-bind:key="user.id">
-                    <Member
-                        :name="user.fname + ' ' + user.lname"
-                        :image="user.image"
-                        :grade="user.grade"
-                        :position="user.position"
-                        :contact_list="user.contact_list"
-                    />
-                </div>
+                <table>
+                    <tr>
+                        <th>Name</th>
+                        <th>Grade</th>
+                    </tr>
+                    <tr v-for="user in userData" v-bind:key="user.id">
+                        <td>{{ user.fname }}</td>
+                        <td>{{ user.grade }}</td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-    import Member from "../components/Member.vue";
     import data from "../assets/example4.json";
 
     export default {
-        name: "Members",
-        components: {
-            Member,
-        },
+        name: "Queue",
         data() {
             return {
                 userData: [],
@@ -35,7 +32,7 @@
         },
         methods: {
             getData() {
-                //fetch("http://localhost:5002/data/existing_member_data")
+                //fetch("http://localhost:5002/data/new_member_data")
                 //    .then((response) => response.json())
                 //    .then((data) => {
                 //        this.userData = data;
@@ -46,6 +43,7 @@
         created() {
             this.getData();
         },
+        bool: true
     };
 
 </script>
@@ -59,8 +57,12 @@ h1 {
   -webkit-text-stroke-color: #111;*/
 }
 
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
 .members {
-    background-color: rgb(39, 37, 37);
     text-align: center;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -73,15 +75,27 @@ h1 {
     grid-row-gap: 50px;
     grid-column-gap: 50px;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 .members-div {
     padding: 50px;
+    font-size: 2.5vw;
 }
 
 .member {
     position: relative;
     margin: 0 auto;
     color: black;
+}
+
+tr:nth-child(even) {
+    background-color: orange;
+    color: black;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(41, 50, 102);
 }
 
 @media(max-width: 900px) {
