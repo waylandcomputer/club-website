@@ -107,7 +107,7 @@ input {
 input[type=text] {
     width: 70%;
     padding: 12px 20px;
-    margin: 8px 0;
+    /*margin: 8px 0;*/
     border-radius: 10px;
 
 
@@ -123,7 +123,7 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     /*width: 7%;*/
     padding: 12px 20px;
-    margin: 8px 0;
+    /*margin: 8px 0;*/
     border-radius: 10px;
     -moz-appearance: textfield;
 }
@@ -157,7 +157,8 @@ label {
 }
 
 p {
-    margin-top: 10px;
+    margin-top: 18px;
+    margin-bottom: 2px;
     font-size: 15px;
     text-transform: lowercase;
 }
