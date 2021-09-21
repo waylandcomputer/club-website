@@ -32,9 +32,9 @@
               school teams.
             </h3>
             <div class="empty"></div>
-
+           <a href="https://play.picoctf.org/events/34/scoreboards#35" class="btn" target="empty">Spring 2021 Scoreboard</a>
           </div>
-            <a href="https://play.picoctf.org/events/34/scoreboards#35" class="btn" target="empty">Spring 2021 Scoreboard</a>
+ 
         </div>
 
         <div class="carousel-cell" id="slide-3">
@@ -44,8 +44,9 @@
             <h3 class="date">cs club<br />--- Winter 2021 ---</h3>
 
             <h3 class="subtitle">
-              Members in our club compete in the USA Computing Olympiad every
-              year.
+              Members from our team actively compete in the USA Computing Olympiad 
+              every year. Competitive programming is a mental sport which enables participants
+              to code a given problem under provided constraints.
             </h3>
             <div class="empty"></div>
             <a href="http://www.usaco.org/" class="btn" target="empty"
@@ -226,8 +227,6 @@ body {
   padding-bottom: 50px;
 }
 #slide-1 {
-  background-image: url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fGNvZGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80");
-  background-size: cover;
 }
 #slide-1 .title {
   color: #75e645;
@@ -259,8 +258,6 @@ body {
 }
 
 #slide-2 {
-  background-image: url("https://www.securitymagazine.com/ext/resources/cyber-1.jpg?1592517088");
-  background-size: cover;
 }
 #slide-2 .title {
   color: #bf1031;
@@ -292,15 +289,13 @@ body {
 }
 
 #slide-3 {
-  background-image: url("https://today.duke.edu/sites/default/files/styles/story_hero/public/coding_HERO.jpg?itok=F8YWeHdH");
-  background-size: cover;
 }
 #slide-3 .title {
   color: #075296;
   font-family: Arial;
   text-transform: none;
   margin-bottom: 10px;
-  margin-top: 12px;
+  margin-top: 42px;
 }
 #slide-3 .btn {
   color: white;
@@ -354,6 +349,12 @@ body {
   #slide-1 .title {
     font-size: 35px;
     /*margin-bottom: 20px;*/
+  }
+  @media (max-width: 1000px) {
+    #slide-1 .title, #slide-2 .title, #slide-3 .title {
+      margin-top: 0px;
+      margin-bottom: 10px;
+    }
   }
 }
 </style>
