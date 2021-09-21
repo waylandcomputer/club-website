@@ -10,10 +10,10 @@
             <div class="form-group">
                 <input type="text" class="form-control" id="lname" placeholder="" v-model="form.lname">
             </div>
-            <p>student email</p>
+<!--             <p>student email</p>
             <div class="form-group">
                 <input type="text" class="form-control" id="lname" placeholder="" v-model="form.email">
-            </div>
+            </div> -->
             <p>Grade</p>
             <div class="form-group">
                 <input type="number" class="form-control" id="grade" placeholder="" max="12" min="9" v-model="form.grade">
@@ -35,25 +35,26 @@ export default { // code taken from https://5balloons.info/post-form-data-to-api
             form: {
                 fname: '',
                 lname: '',
+                // email: '',
                 grade: ''
             }
         }
     },
     methods:{
         submitForm(){
-            if (!this.form.fname || !this.form.lname || !this.form.grade || !this.form.email) {
+            if (!this.form.fname || !this.form.lname || !this.form.grade) {
                 alert("Please fill out all the fields");
             }
-            if(!(this.form.email.includes("_") && this.form.email.includes("@student.waylandps.org"))) {
-                alert("Enter a valid email!");
-            }
+            // if(!(this.form.email.includes("_") && this.form.email.includes("@student.waylandps.org"))) {
+            //     alert("Enter a valid email!");
+            // }
             else {
                 axios.post('http://localhost:5002/data/signup', this.form);
                 this.$router.push({ name: 'Queue' });
                 // clear form
                 this.form.fname = "";
                 this.form.lname = "";
-                this.form.email = "";
+                // this.form.email = "";
                 this.form.grade = "";
             } 
         }
@@ -89,7 +90,7 @@ export default { // code taken from https://5balloons.info/post-form-data-to-api
     transform: translate(-50%, -50%);
 }
 
-@media(max-width: 500px) {
+@media(max-width: 800px) {
     .innerf {
         width: 60%;
     }
