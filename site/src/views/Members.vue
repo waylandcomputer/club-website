@@ -21,7 +21,7 @@
 
 <script>
     import Member from "../components/Member.vue";
-    //import data from "../assets/example4.json";
+    import data from "../assets/example4.json";
 
     export default {
         name: "Members",
