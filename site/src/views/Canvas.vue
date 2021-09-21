@@ -81,8 +81,8 @@ export default {
         typing();
 
         buttons.forEach((button) => {
-          button.update();
-          button.show();
+          // button.update();
+          // button.show();
         });
       };
 
