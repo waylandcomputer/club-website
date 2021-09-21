@@ -137,7 +137,7 @@ body::-webkit-scrollbar {
 
 @media(max-width: 400px) {
     .nav-link {
-        font-size: 15px;
+        font-size: 12px;
     }
 }
 
