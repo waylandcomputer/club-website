@@ -16,6 +16,8 @@ export default {
       let aDir = 0; //Change to add a bit of animation h
       let typeBar;
       let selectedButton = 1;
+      let shiftPressed = false;
+      let maxDist = 500;
 
       let r = 0;
 
@@ -32,10 +34,19 @@ export default {
           );
         }
 
+        
+
+        buttons.push(
+          new Button(
+            (p5.width * 8.5) / 12,
+            p5.height / 24,
+            p5.width / 30,
+            'c'
+          ));
         for (let i = 0; i < 4; i++) {
           buttons.push(
             new Button(
-              (p5.width * 9.2) / 12 + (i * p5.width) / 18,
+              (p5.width * 8.5) / 12 + ((i+1) * p5.width) / 18,
               p5.height / 24,
               p5.width / 30,
               i
@@ -64,6 +75,9 @@ export default {
         p5.textFont("Monospace");
         p5.noStroke();
         p5.textAlign(p5.CENTER, p5.BASELINE);
+
+        p5.push();
+        p5.translate(0, -20 + p5.height/20 - p5.width/24);
         for (let i = 0; i < a; i++) {
           p5.fill(17 + (255 / a) * i, 17 + (145 / a) * i, 17 + (62 / a) * i);
           p5.text(
@@ -79,11 +93,14 @@ export default {
         }
 
         typing();
+        p5.pop();
 
-        buttons.forEach((button) => {
-          // button.update();
-          // button.show();
-        });
+        if(shiftPressed) {
+          buttons.forEach((button) => {
+            button.update();
+            button.show();
+          });
+        }
       };
 
       let typingIndex = 0;
@@ -111,7 +128,20 @@ export default {
         p5.rect(typeBar.x, typeBar.y, p5.width / 180, p5.width / 6);
       }
 
-      p5.keyPressed = function () {};
+      p5.keyPressed = function () {
+        if(p5.keyCode == p5.SHIFT) {
+          shiftPressed = true;
+        }
+      };
+
+      p5.keyReleased = function () {
+        if(p5.keyCode == p5.SHIFT) {
+          shiftPressed = false;
+          buttons.forEach(button => {
+            button.touchingMouse = false;
+          });
+        }
+      };
 
       p5.mouseClicked = function () {
         particles.forEach((particle) => {
@@ -173,12 +203,14 @@ export default {
               ) {
                 nearest = particles[i];
               }
-              p5.line(
-                this.position.x + p5.random(r),
-                this.position.y + p5.random(r),
-                nearest.position.x - nearest.velocity.x + p5.random(r),
-                nearest.position.y - nearest.velocity.y + p5.random(r)
-              );
+              if(this.dist(this.position, nearest.position) < maxDist) {
+                p5.line(
+                  this.position.x + p5.random(r),
+                  this.position.y + p5.random(r),
+                  nearest.position.x - nearest.velocity.x + p5.random(r),
+                  nearest.position.y - nearest.velocity.y + p5.random(r)
+                );
+              }
             }
             if (selectedButton >= 2) {
               let secondNearest = particles[1];
@@ -197,16 +229,18 @@ export default {
 
               p5.stroke(255, 193, 79);
               p5.strokeWeight(this.size / 8);
-              p5.line(
-                this.position.x + p5.random(r),
-                this.position.y + p5.random(r),
-                secondNearest.position.x -
-                  secondNearest.velocity.x +
-                  p5.random(r),
-                secondNearest.position.y -
-                  secondNearest.velocity.y +
-                  p5.random(r)
-              );
+              if(this.dist(this.position, secondNearest.position) < maxDist) {
+                p5.line(
+                  this.position.x + p5.random(r),
+                  this.position.y + p5.random(r),
+                  secondNearest.position.x -
+                    secondNearest.velocity.x +
+                    p5.random(r),
+                  secondNearest.position.y -
+                    secondNearest.velocity.y +
+                    p5.random(r)
+                );
+              }
               if (selectedButton >= 3) {
                 let thirdNearest = particles[2];
 
@@ -226,16 +260,18 @@ export default {
 
                 p5.stroke(255, 193, 79);
                 p5.strokeWeight(this.size / 16);
-                p5.line(
-                  this.position.x + p5.random(r),
-                  this.position.y + p5.random(r),
-                  thirdNearest.position.x -
-                    thirdNearest.velocity.x +
-                    p5.random(r),
-                  thirdNearest.position.y -
-                    thirdNearest.velocity.y +
-                    p5.random(r)
-                );
+                if(this.dist(this.position, thirdNearest.position) < maxDist) {
+                  p5.line(
+                    this.position.x + p5.random(r),
+                    this.position.y + p5.random(r),
+                    thirdNearest.position.x -
+                      thirdNearest.velocity.x +
+                      p5.random(r),
+                    thirdNearest.position.y -
+                      thirdNearest.velocity.y +
+                      p5.random(r)
+                  );
+                }
               }
             }
           }
@@ -301,7 +337,18 @@ export default {
           this.touchingMouse =
             p5.dist(this.x, this.y, p5.mouseX, p5.mouseY) < this.size / 2;
           if (this.touchingMouse && p5.mouseIsPressed) {
-            selectedButton = n;
+            if(n == 'c') {
+              if(particles.length > 5) {
+                particles = [];
+                for (let i = 0; i < 5; i++) {
+                  particles.push(
+                    new Particle(p5.random(0, p5.width), p5.random(0, p5.height))
+                  );
+                }
+              }
+            } else {
+              selectedButton = n;
+            }
           }
         };
       }
