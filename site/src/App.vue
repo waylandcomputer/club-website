@@ -7,6 +7,8 @@
         <router-link style="padding-left: 10px" to="/about" class="nav-link">about</router-link>
         <router-link to="/members" id="member-link" class="nav-link">members</router-link>
         <router-link to="/projects" class="nav-link">projects</router-link>
+        <router-link to="/signup" class="nav-link">join</router-link>
+        <!-- <router-link to="/queue" class="nav-link">queue</router-link> -->
         <!-- <router-link to="/signup" class="nav-link">Sign Up</router-link> -->
 	</div>
 	<body>
@@ -131,6 +133,12 @@ body::-webkit-scrollbar {
     display: table-cell;
     vertical-align: middle;
     padding-left: 20px;
+}
+
+@media(max-width: 400px) {
+    .nav-link {
+        font-size: 15px;
+    }
 }
 
 /*.nav-link_about {
