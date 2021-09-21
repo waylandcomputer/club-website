@@ -10,10 +10,14 @@ export default {
   mounted() {
     const script = (p5) => {
       let particles = [];
+      let buttons = [];
       let title = "";
       let a ;
       let aDir = 0; //Change to add a bit of animation h
       let typeBar;
+      let selectedButton = 1;
+
+      let r = 0;
 
       p5.setup = function () {
         p5.createCanvas(window.innerWidth, window.innerHeight);
@@ -27,9 +31,14 @@ export default {
             new Particle(p5.random(0, p5.width), p5.random(0, p5.height))
           );
         }
+        
+        for(let i = 0; i < 4; i++) {
+          buttons.push(new Button(p5.width * 9.2 / 12 + i * p5.width/18, p5.height/24, p5.width/30, i));
+        }
       };
 
       p5.draw = function () {
+        p5.background(17);
         particles.forEach((particle) => {
           particle.show();
           particle.update();
@@ -37,7 +46,7 @@ export default {
         p5.rectMode(p5.CORNER);
         p5.noStroke();
         for(let i = -2; i < p5.height; i+=2) {
-          p5.fill(17 + 100-Math.abs(100-100*(i/(p5.height/2))), 200);
+          p5.fill(17 + 100-Math.abs(100-100*(i/(p5.height/2))), 100);
           p5.rect(0, i, p5.width, 2);
         } 
         p5.fill(0);
@@ -47,7 +56,7 @@ export default {
         p5.textSize(p5.width / 6);
         p5.textFont("Monospace");
         p5.noStroke();
-        p5.textAlign(p5.CENTER);
+        p5.textAlign(p5.CENTER, p5.BASELINE);
         for (let i = 0; i < a; i++) {
           p5.fill(17 + (255 / a) * i, 17 + (145 / a) * i, 17 + (62 / a) * i);
           p5.text(
@@ -63,6 +72,11 @@ export default {
         }
 
         typing();
+
+        buttons.forEach(button => {
+          button.update();
+          button.show();
+        });
       };
 
       let typingIndex = 0;
@@ -104,7 +118,15 @@ export default {
           );
         });
 
-        particles.push(new Particle(p5.mouseX, p5.mouseY));
+        let flag = true;
+        buttons.forEach(button => {
+          if(button.touchingMouse) {
+            flag = false;
+          }
+        });
+        if(flag) { //Only add particle if buttons aren't being iteracted with
+          particles.push(new Particle(p5.mouseX, p5.mouseY));
+        }
       };
 
       function Particle(x, y) {
@@ -123,50 +145,86 @@ export default {
           //   this.size * 1.1
           // );
           p5.fill(255, 193, 79);
-          p5.stroke(255, 193, 79);
-          p5.strokeWeight(this.size / 4);
-          let distFromMid = this.dist(
-            this.position,
-            p5.createVector(p5.width / 2, p5.height / 2)
-          );
+          p5.noStroke();
           p5.ellipse(this.position.x, this.position.y, this.size, this.size);
 
-          let nearest = particles[0];
-          let secondNearest = particles[1];
-          if (this.dist(this.position, nearest.position) == 0) {
-            nearest = particles[1];
-          }
-          for (let i = 1; i < particles.length; i++) {
-            if (
-              this.dist(this.position, particles[i].position) != 0 &&
-              this.dist(this.position, particles[i].position) <
-                this.dist(this.position, nearest.position)
-            ) {
-              nearest = particles[i];
+          p5.stroke(255, 193, 79);
+          p5.strokeWeight(this.size / 4);
+
+
+          if(selectedButton >= 1) {
+            let nearest = particles[0];
+
+            if (this.dist(this.position, nearest.position) == 0) {
+              nearest = particles[1];
+            }
+            for (let i = 1; i < particles.length; i++) {
+              if (
+                this.dist(this.position, particles[i].position) != 0 &&
+                this.dist(this.position, particles[i].position) <
+                  this.dist(this.position, nearest.position)
+              ) {
+                nearest = particles[i];
+              }
+            p5.line(
+              this.position.x + p5.random(r),
+              this.position.y + p5.random(r),
+              nearest.position.x - nearest.velocity.x + p5.random(r),
+              nearest.position.y - nearest.velocity.y + p5.random(r)
+            );
+            }
+            if(selectedButton >= 2) {
+              let secondNearest = particles[1];
+
+              for (let i = 0; i < particles.length; i++) {
+                if (
+                  this.dist(this.position, particles[i].position) != 0 && this.dist(this.position, particles[i].position) >
+                    this.dist(this.position, nearest.position) &&
+                  this.dist(this.position, particles[i].position) <
+                    this.dist(this.position, secondNearest.position)
+                ) {
+                  secondNearest = particles[i];
+                }
+              }
+
+              p5.stroke(255, 193, 79);
+              p5.strokeWeight(this.size / 8);
+              p5.line(
+                this.position.x + p5.random(r),
+                this.position.y + p5.random(r),
+                secondNearest.position.x - secondNearest.velocity.x + p5.random(r),
+                secondNearest.position.y - secondNearest.velocity.y + p5.random(r)
+              );
+              if(selectedButton >= 3) {
+                let thirdNearest = particles[2];
+              
+                for (let i = 0; i < particles.length; i++) {
+                  if (
+                    this.dist(this.position, particles[i].position) != 0 && this.dist(this.position, particles[i].position) >
+                      this.dist(this.position, nearest.position) &&
+                    this.dist(this.position, particles[i].position) >
+                      this.dist(this.position, secondNearest.position)&&
+                    this.dist(this.position, particles[i].position) <
+                      this.dist(this.position, thirdNearest.position)
+                  ) {
+                    thirdNearest = particles[i];
+                  }
+                }
+
+                p5.stroke(255, 193, 79);
+                p5.strokeWeight(this.size / 16);
+                p5.line(
+                  this.position.x + p5.random(r),
+                  this.position.y + p5.random(r),
+                  thirdNearest.position.x - thirdNearest.velocity.x + p5.random(r),
+                  thirdNearest.position.y - thirdNearest.velocity.y + p5.random(r)
+                );
+              }
             }
           }
-          for (let i = 0; i < particles.length; i++) {
-            if (
-              this.dist(this.position, particles[i].position) != 0 && this.dist(this.position, particles[i].position) >
-                this.dist(this.position, nearest.position) &&
-              this.dist(this.position, particles[i].position) <
-                this.dist(this.position, secondNearest.position)
-            ) {
-              secondNearest = particles[i];
-            }
-          }
-          p5.line(
-            this.position.x + p5.random(5),
-            this.position.y + p5.random(5),
-            nearest.position.x - nearest.velocity.x + p5.random(5),
-            nearest.position.y - nearest.velocity.y + p5.random(5)
-          );
-          p5.line(
-            this.position.x + p5.random(5),
-            this.position.y + p5.random(5),
-            secondNearest.position.x - secondNearest.velocity.x + p5.random(5),
-            secondNearest.position.y - secondNearest.velocity.y + p5.random(5)
-          );
+
+
+          
 
 
           // let random = particles[Math.floor(p5.random(particles.length))];
@@ -203,36 +261,36 @@ export default {
         };
       }
 
-      // function FallingText(char, x) {
-      //   this.x = x;
-      //   this.y = -10;
-      //   this.yv = 0;
-      //   this.char = char;
-      //   this.bounces = 2;
-      //   this.restitution = p5.random(0.3, 0.7);
-      //   this.rotV = p5.random(-0.2, 0.2);
-      //   this.rot = 0;
+      function Button(x, y, size, n) {
+        this.x = x;
+        this.y = y;
+        this.n = n;
+        this.size = size;
+        this.touchingMouse = false;
+        
+        this.show = function() {
+          p5.stroke(230);
+          p5.strokeWeight(size/12);
+          if(this.touchingMouse || selectedButton == n) {
+            p5.fill(150);
+          } else {
+            p5.noFill();
+          }
+          p5.ellipse(x, y, this.size, this.size);
+          p5.noStroke();
+          p5.fill(255);
+          p5.textAlign(p5.CENTER, p5.CENTER);
+          p5.textSize(this.size/2);
+          p5.text(n, x, y);
+        }
 
-      //   this.show = function () {
-      //     let ascii = char.charCodeAt(0);
-      //     let c = p5.map(ascii, 32, 126, 0, 255);
-      //     p5.colorMode(p5.HSB);
-      //     p5.fill(c, 255, 255);
-      //     p5.noStroke();
-      //     p5.textSize(50);
-      //     p5.push();
-      //     p5.translate(this.x, this.y);
-      //     p5.rotate(this.rot);
-      //     p5.textAlign(p5.CENTER, p5.CENTER);
-      //     p5.text(this.char, 0, 0);
-      //     p5.pop();
-      //   };
-
-      //   this.update = function () {
-      //     this.y += this.yv;
-      //     this.rot += this.rotV;
-      //   };
-      // }
+        this.update = function() {
+          this.touchingMouse = p5.dist(this.x, this.y, p5.mouseX, p5.mouseY) < this.size/2;
+          if(this.touchingMouse && p5.mouseIsPressed) {
+            selectedButton = n;
+          }
+        }
+      }
     };
     // Attach the canvas to the div
 
