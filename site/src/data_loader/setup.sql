@@ -86,7 +86,6 @@ INSERT INTO contacts (link, icon, member) VALUES ('https://github.com/Shen0000',
 
 INSERT INTO contacts (link, icon, member) VALUES ('https://www.youtube.com/annielong', 'fab fa-youtube', 6);
 INSERT INTO contacts (link, icon, member) VALUES ('https://www.instagram.com/annielongyt/', 'fab fa-instagram', 6);
-INSERT INTO contacts (link, icon, member) VALUES ('https://vm.tiktok.com/tnJR1e/', 'fab fa-tiktok', 6);
 INSERT INTO contacts (link, icon, member) VALUES ('mailto: annie_long@student.waylandps.org', 'fa fa-envelope', 6);
 
 INSERT INTO contacts (link, icon, member) VALUES ('https://www.youtube.com/channel/UC5_qwJr1J4mdRHWhdwgCAdg', 'fab fa-youtube', 7);
