@@ -33,7 +33,7 @@
         },
         methods: {
             async getData() {
-                const res = await fetch("http://localhost:5002/data/new_member_data");
+                const res = await fetch("https://waylandcs.com/data/new_member_data");
                 const data = await res.json();
                 this.userData = data;
                 //fetch("http://localhost:5002/data/new_member_data")

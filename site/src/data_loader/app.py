@@ -16,7 +16,7 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get('DATABASE_URI')
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
-CORS(app, resources={r'/data/*': {'origins': 'http://localhost:8080'}})
+CORS(app, resources={r'/data/*': {'origins': '*'}})
 
 from models import Member, Project, Contact, Language
 
@@ -67,7 +67,7 @@ def load_data():
     # data = {'members': [], 'contacts': []}
     members = Member.query.filter_by().all()
     for member in members:
-        if member.created_at <= datetime.datetime(2021, 9, 20):  # TODO: fix
+        if member.created_at <= datetime.datetime(2021, 9, 22):  # TODO: fix
             member_info = member.__dict__
             del member_info['_sa_instance_state']
             contact_info = Contact.query.filter_by(member=member.id).all()
@@ -90,9 +90,9 @@ def load_data():
 def load_data2():
     data = []
     # data = {'members': [], 'contacts': []}
-    members = Member.query.filter_by().all()
+    members = Member.query.all()
     for member in members:
-        if member.created_at >= datetime.datetime(2021, 9, 20):  # TODO: fix
+        if member.created_at >= datetime.datetime(2021, 9, 22):  # TODO: fix
             member_info = member.__dict__
             del member_info['_sa_instance_state']
             contact_info = Contact.query.filter_by(member=member.id).all()
@@ -107,5 +107,4 @@ def load_data2():
             member_info["contact_list"] = contact_list
             # data[member.id] = member_info
             data.append(member_info)
-
     return jsonify(data)

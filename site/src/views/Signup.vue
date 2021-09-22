@@ -49,7 +49,7 @@ export default { // code taken from https://5balloons.info/post-form-data-to-api
             //     alert("Enter a valid email!");
             // }
             else {
-                await axios.post('http://localhost:5002/data/signup', this.form);
+                await axios.post('https://waylandcs.com/data/signup', this.form);
                 this.$router.push({ name: 'Queue' });
                 // clear form
                 this.form.fname = "";

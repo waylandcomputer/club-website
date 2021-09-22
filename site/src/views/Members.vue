@@ -21,7 +21,7 @@
 
 <script>
     import Member from "../components/Member.vue";
-    import data from "../assets/example4.json";
+    //import data from "../assets/example4.json";
 
     export default {
         name: "Members",
@@ -35,7 +35,7 @@
         },
         methods: {
             getData() {
-                fetch("http://localhost:5002/data/existing_member_data")
+                fetch("https://waylandcs.com/data/existing_member_data")
                     .then((response) => response.json())
                     .then((data) => {
                         this.userData = data;
