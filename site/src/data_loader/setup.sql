@@ -62,6 +62,7 @@ INSERT INTO members (fname, lname, grade, image, position, description) VALUES (
 INSERT INTO members (fname, lname, grade, image, position, description) VALUES ('Michael', 'Wightman', 10, 'Michael.jpg', 'M', 'Aliquam a nisi blandit, ultrices enim id, imperdiet sapien. In rutrum, nibh non volutpat rhoncus, mauris nulla semper augue, ut lobortis augue orci at nisl. Maecenas quis lobortis justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum egestas interdum purus sagittis pellentesque. Cras sit amet est sit amet urna volutpat ornare at at justo. Morbi vel arcu vitae nibh maximus dapibus nec id magna. Sed sit amet congue tortor. Sed sit amet varius lorem, porta accumsan lorem. Suspendisse dignissim iaculis dolor sit amet luctus. Nulla molestie sem non lectus vehicula tempor.');
 INSERT INTO members (fname, lname, grade, image, position, description) VALUES ('Ben', 'Stahl', 11, 'Ben.jpg', 'M', 'Aliquam a nisi blandit, ultrices enim id, imperdiet sapien. In rutrum, nibh non volutpat rhoncus, mauris nulla semper augue, ut lobortis augue orci at nisl. Maecenas quis lobortis justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum egestas interdum purus sagittis pellentesque. Cras sit amet est sit amet urna volutpat ornare at at justo. Morbi vel arcu vitae nibh maximus dapibus nec id magna. Sed sit amet congue tortor. Sed sit amet varius lorem, porta accumsan lorem. Suspendisse dignissim iaculis dolor sit amet luctus. Nulla molestie sem non lectus vehicula tempor.');
 INSERT INTO members (fname, lname, grade, image, position, description) VALUES ('Ayaan', 'Rashid', 12, 'Ayaan.jpg', 'M', 'Aliquam a nisi blandit, ultrices enim id, imperdiet sapien. In rutrum, nibh non volutpat rhoncus, mauris nulla semper augue, ut lobortis augue orci at nisl. Maecenas quis lobortis justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum egestas interdum purus sagittis pellentesque. Cras sit amet est sit amet urna volutpat ornare at at justo. Morbi vel arcu vitae nibh maximus dapibus nec id magna. Sed sit amet congue tortor. Sed sit amet varius lorem, porta accumsan lorem. Suspendisse dignissim iaculis dolor sit amet luctus. Nulla molestie sem non lectus vehicula tempor.');
+INSERT INTO members (fname, lname, grade, image, position, description) VALUES ('Ari', 'Zukerman', 10, 'Ari.png', 'M', 'Aliquam a nisi blandit, ultrices enim id, imperdiet sapien. In rutrum, nibh non volutpat rhoncus, mauris nulla semper augue, ut lobortis augue orci at nisl. Maecenas quis lobortis justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum egestas interdum purus sagittis pellentesque. Cras sit amet est sit amet urna volutpat ornare at at justo. Morbi vel arcu vitae nibh maximus dapibus nec id magna. Sed sit amet congue tortor. Sed sit amet varius lorem, porta accumsan lorem. Suspendisse dignissim iaculis dolor sit amet luctus. Nulla molestie sem non lectus vehicula tempor.');
 
 
 INSERT INTO contacts (link, icon, member) VALUES ('https://www.linkedin.com/in/andrew-boyer-1771791b0', 'fab fa-linkedin', 1);
@@ -121,6 +122,10 @@ INSERT INTO contacts (link, icon, member) VALUES ('mailto: ayaan_rashid@student.
 INSERT INTO contacts (link, icon, member) VALUES ('https://www.instagram.com/cptcranjuice/', 'fab fa-instagram', 17);
 INSERT INTO contacts (link, icon, member) VALUES ('https://github.com/CptCranJuice', 'fab fa-github', 17);
 
+INSERT INTO contacts (link, icon, member) VALUES ('https://open.spotify.com/user/ggm1ugsuuoshtxsm19m15bf8k?si=mWWj7di6TzCDHg1gRBH_EQ&dl_branch=1', 'fab fa-spotify', 18);
+INSERT INTO contacts (link, icon, member) VALUES ('https://github.com/ariiiiiiiiiiiiiZ', 'fab fa-github', 18);
+INSERT INTO contacts (link, icon, member) VALUES ('https://twitter.com/shigetora_twit', 'fa fa-twitter', 18);
+
 INSERT INTO languages (language, member) VALUES ('Bash', 1);
 INSERT INTO languages (language, member) VALUES ('Java', 1);
 INSERT INTO languages (language, member) VALUES ('Javascript', 1);
@@ -170,3 +175,5 @@ INSERT INTO languages (language, member) VALUES ('Java', 15);
 INSERT INTO languages (language, member) VALUES ('Python', 16);
 
 INSERT INTO languages (language, member) VALUES ('Java', 17);
+
+INSERT INTO languages (language, member) VALUES ('Swift', 18);
