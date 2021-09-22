@@ -21,8 +21,6 @@
 </template>
 
 <script>
-    //import data from "../assets/example4.json";
-
     export default {
         name: "Queue",
         data() {
@@ -36,12 +34,6 @@
                 const res = await fetch("https://waylandcs.com/data/new_member_data");
                 const data = await res.json();
                 this.userData = data;
-                //fetch("http://localhost:5002/data/new_member_data")
-                //    .then((response) => response.json())
-                //    .then((data) => {
-                //        this.userData = data;
-                //    });
-                //this.userData = data;
             },
             cancelAutoUpdate() {
                 clearInterval(this.timer);

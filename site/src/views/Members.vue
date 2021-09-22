@@ -21,7 +21,6 @@
 
 <script>
     import Member from "../components/Member.vue";
-    //import data from "../assets/example4.json";
 
     export default {
         name: "Members",
@@ -40,7 +39,6 @@
                     .then((data) => {
                         this.userData = data;
                     });
-                //this.userData = data;
             },
         },
         created() {
