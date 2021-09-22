@@ -88,6 +88,7 @@ export default { // code taken from https://5balloons.info/post-form-data-to-api
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    background-color: #1f1d1d;
 }
 
 @media(max-width: 800px) {
@@ -106,7 +107,7 @@ input {
 input[type=text] {
     width: 70%;
     padding: 12px 20px;
-    margin: 8px 0;
+    /*margin: 8px 0;*/
     border-radius: 10px;
 
 
@@ -122,7 +123,7 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     /*width: 7%;*/
     padding: 12px 20px;
-    margin: 8px 0;
+    /*margin: 8px 0;*/
     border-radius: 10px;
     -moz-appearance: textfield;
 }
@@ -135,12 +136,16 @@ input[type=submit] {
     margin-top: 30px;
     border-radius: 10px;
     background-color: #ffbc57;
+    border: 1px solid #111;
+
 }
 input[type=submit]:hover {
     cursor: pointer;
     text-transform: lowercase;
-    background-color: #111;
+    background-color: rgb(39, 37, 37);;
     color: #ffbc57;
+    border: 1px solid #ffbc57;
+
 
 
 }
@@ -152,7 +157,8 @@ label {
 }
 
 p {
-    margin-top: 10px;
+    margin-top: 18px;
+    margin-bottom: 2px;
     font-size: 15px;
     text-transform: lowercase;
 }
