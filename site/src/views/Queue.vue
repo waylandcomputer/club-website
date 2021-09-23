@@ -9,10 +9,12 @@
                     <tr>
                         <th>name</th>
                         <th>grade</th>
+                        <th>date</th>
                     </tr>
                     <tr v-for="user in userData" v-bind:key="user.id">
                         <td>{{ user.fname }} {{ user.lname }}</td>
                         <td>{{ user.grade }}</td>
+                        <td>{{ user.strftime('%H:%M %d-%m-%y') }}</td>
                     </tr>
                 </table>
             </div>
