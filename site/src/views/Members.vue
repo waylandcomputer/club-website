@@ -4,7 +4,8 @@
         current members
         </h1>
         <div class="members-div">
-            <div class="member-grid">
+            <div v-if="loading" class="loader"></div>
+            <div v-else class="member-grid">
                 <div class="member" v-for="user in userData" v-bind:key="user.id">
                     <Member
                         :name="user.fname + ' ' + user.lname"
@@ -31,6 +32,7 @@
         data() {
             return {
                 userData: [],
+                loading: true,
             };
         },
         methods: {
@@ -39,8 +41,12 @@
                 //    .then((response) => response.json())
                 //    .then((data) => {
                 //        this.userData = data;
+                //        this.loading = false;
                 //    });
+
+                // Code above should be used in prod to get loading icon. 
                 this.userData = data;
+                this.loading = false; // remove this line to see loading 
             },
         },
         created() {
@@ -90,6 +96,21 @@ h1 {
       /*-webkit-text-stroke-width: 1px;*/
 
     }
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #ffbc57; /* Blue */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 </style>
