@@ -1,25 +1,25 @@
 <template>
     <div class="signup">
         <div class="innerf">
-        <form v-on:submit.prevent="submitForm">
-            <p>First Name</p>
-            <div class="form-group">
-                <input type="text" class="form-control" id="fname" placeholder="" v-model="form.fname">
-            </div>
-            <p>Last Name</p>
-            <div class="form-group">
-                <input type="text" class="form-control" id="lname" placeholder="" v-model="form.lname">
-            </div>
-<!--             <p>student email</p>
-            <div class="form-group">
-                <input type="text" class="form-control" id="lname" placeholder="" v-model="form.email">
-            </div> -->
-            <p>Grade</p>
-            <div class="form-group">
-                <input type="number" class="form-control" id="grade" placeholder="" max="12" min="9" v-model="form.grade">
-            </div>
-            <input type="submit" value="submit">
-        </form>
+            <form v-on:submit.prevent="submitForm">
+                <p>First Name</p>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="fname" placeholder="" v-model="form.fname">
+                </div>
+                <p>Last Name</p>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="lname" placeholder="" v-model="form.lname">
+                </div>
+    <!--             <p>student email</p>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="lname" placeholder="" v-model="form.email">
+                </div> -->
+                <p>Grade</p>
+                <div class="form-group">
+                    <input type="number" class="form-control" id="grade" placeholder="" max="12" min="9" v-model="form.grade">
+                </div>
+                <input type="submit" value="submit">
+            </form>
         </div>
     </div>
 </template>
@@ -49,7 +49,10 @@ export default { // code taken from https://5balloons.info/post-form-data-to-api
             //     alert("Enter a valid email!");
             // }
             else {
-                await axios.post('https://waylandcs.com/data/signup', this.form);
+                var response = await axios.post('https://waylandcs.com/data/signup', this.form);
+                if (response.data === "Pending") {
+                    alert("You will be approved shortly by a club member.");
+                }
                 this.$router.push({ name: 'Queue' });
                 // clear form
                 this.form.fname = "";
