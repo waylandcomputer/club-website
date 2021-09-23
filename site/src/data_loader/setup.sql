@@ -65,9 +65,8 @@ INSERT INTO members (fname, lname, grade, image, position, description) VALUES (
 INSERT INTO members (fname, lname, grade, image, position, description) VALUES ('Ari', 'Zukerman', 10, 'Ari.png', 'M', 'Aliquam a nisi blandit, ultrices enim id, imperdiet sapien. In rutrum, nibh non volutpat rhoncus, mauris nulla semper augue, ut lobortis augue orci at nisl. Maecenas quis lobortis justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum egestas interdum purus sagittis pellentesque. Cras sit amet est sit amet urna volutpat ornare at at justo. Morbi vel arcu vitae nibh maximus dapibus nec id magna. Sed sit amet congue tortor. Sed sit amet varius lorem, porta accumsan lorem. Suspendisse dignissim iaculis dolor sit amet luctus. Nulla molestie sem non lectus vehicula tempor.');
 
 
-INSERT INTO contacts (link, icon, member) VALUES ('https://www.linkedin.com/in/andrew-boyer-1771791b0', 'fab fa-linkedin', 1);
-INSERT INTO contacts (link, icon, member) VALUES ('https://github.com/asboyer2', 'fab fa-github', 1);
-INSERT INTO contacts (link, icon, member) VALUES ('https://open.spotify.com/user/uuzdbyuye92sxqjltw955qm9n?si=rPFH2WO_TQOwm8TH_PPzVQ', 'fab fa-spotify', 1);
+INSERT INTO contacts (link, icon, member) VALUES ('https://www.linkedin.com/in/asboyer', 'fab fa-linkedin', 1);
+INSERT INTO contacts (link, icon, member) VALUES ('https://github.com/asboyer', 'fab fa-github', 1);
 INSERT INTO contacts (link, icon, member) VALUES ('https://asboyer.com/', 'fas fa-link', 1);
 
 INSERT INTO contacts (link, icon, member) VALUES ('mailto: ericxie6@gmail.com', 'fa fa-envelope', 2);
