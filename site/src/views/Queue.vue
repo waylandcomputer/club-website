@@ -9,12 +9,12 @@
                     <tr>
                         <th>name</th>
                         <th>grade</th>
-                        <th>date</th>
+                        <th>signup date</th>
                     </tr>
                     <tr v-for="user in userData" v-bind:key="user.id">
                         <td>{{ user.fname }} {{ user.lname }}</td>
                         <td>{{ user.grade }}</td>
-                        <td>{{ user.created_at }}</td>
+                        <td>{{ convertFromNow(user.created_at) }}</td>
                     </tr>
                 </table>
             </div>
@@ -23,6 +23,8 @@
 </template>
 
 <script>
+    import moment from "moment";
+
     export default {
         name: "Queue",
         data() {
@@ -39,6 +41,9 @@
             },
             cancelAutoUpdate() {
                 clearInterval(this.timer);
+            },
+            convertFromNow(date) {
+                return moment.utc(date).local().format('YYYY-MM-DD HH:mm:ss');
             },
         },
         beforeUnmount() {

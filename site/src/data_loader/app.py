@@ -29,7 +29,7 @@ local_config = dict(
 from models import Member, Contact #, Project, Language
 
 
-@app.route("/data/admin", methods=["GET", "POST"])
+@app.route("/data/admin_REDACTED", methods=["GET", "POST"])
 def render_admin_panel():
     if request.method == "POST":
         local_config["require_admin_approval"] = "require_admin_approval" in request.form
