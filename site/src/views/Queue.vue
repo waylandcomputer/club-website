@@ -43,7 +43,7 @@
                 clearInterval(this.timer);
             },
             convertFromNow(date) {
-                return moment.utc(date).local().format('YYYY-MM-DD HH:mm:ss');
+                return moment.utc(date).local().format('hh:mm:ss a YYYY/MM/DD');
             },
         },
         beforeUnmount() {

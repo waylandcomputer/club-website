@@ -178,3 +178,5 @@ INSERT INTO languages (language, member) VALUES ('Python', 16);
 INSERT INTO languages (language, member) VALUES ('Java', 17);
 
 INSERT INTO languages (language, member) VALUES ('Swift', 18);
+
+COPY (SELECT CURRENT_DATE,CURRENT_TIME AT TIME ZONE 'EST') TO '/Users/kevin_zhao/PycharmProjects/club-website/site/src/data_loader/finish_time.txt';

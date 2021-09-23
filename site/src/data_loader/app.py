@@ -7,6 +7,7 @@ from flask import Flask, render_template, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_cors import CORS
+from pytz import timezone
 
 
 load_dotenv(".env")
@@ -20,11 +21,13 @@ CORS(app, resources={r'/data/*': {'origins': '*'}})
 
 
 local_config = dict(
-    init_date = datetime.datetime(2021, 9, 20),
+    init_date = datetime.datetime(1970, 1, 1),
     require_admin_approval = False,
 )
 
-
+with open("finish_time.txt") as f:
+    s = f.readline().replace("\t", " ")
+    local_config["init_date"] = s[:s.rfind(".")]
 
 from models import Member, Contact #, Project, Language
 
@@ -61,12 +64,12 @@ def process_signup():
     lname = form["lname"]
     grade = form["grade"]
     if local_config["require_admin_approval"]:
-        new_member = Member(fname=fname, lname=lname, grade=grade, image='template.jpg', position='N')
+        new_member = Member(fname=fname, lname=lname, grade=grade, image='template.jpg', position='N', created_at=datetime.datetime.now(timezone('America/New_York')))
         db.session.add(new_member)
         db.session.commit()
         return "Pending"
     else:
-        new_member = Member(fname=fname, lname=lname, grade=grade, image='template.jpg', position='M')
+        new_member = Member(fname=fname, lname=lname, grade=grade, image='template.jpg', position='M', created_at=datetime.datetime.now(timezone('America/New_York')))
         db.session.add(new_member)
         db.session.commit()
         return "Accepted"
