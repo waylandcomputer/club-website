@@ -46,7 +46,7 @@
 
                 // Code above should be used in prod to get loading icon. 
                 this.userData = data;
-                this.loading = false; // remove this line to see loading 
+                // this.loading = false; // remove this line to see loading 
             },
         },
         created() {
@@ -99,7 +99,7 @@ h1 {
 }
 
 .loader {
-  border: 16px solid #f3f3f3; /* Light grey */
+  border: 16px solid #111; /* Light grey */
   border-top: 16px solid #ffbc57; /* Blue */
   border-radius: 50%;
   width: 100px;
