@@ -115,6 +115,8 @@ INSERT INTO contacts (link, icon, member) VALUES ('https://github.com/sammmmmc',
 INSERT INTO contacts (link, icon, member) VALUES ('ayush_kumar@student.waylandps.org', 'fa fa-envelope', 14);
 INSERT INTO contacts (link, icon, member) VALUES ('https://github.com/akumar2006 ', 'fab fa-github', 14);
 
+INSERT INTO contacts (link, icon, member) VALUES ('https://github.com/MichaelWightman124', 'fab fa-github', 15);
+
 INSERT INTO contacts (link, icon, member) VALUES ('mailto: benjamin_stahl@student.waylandps.org', 'fa fa-envelope', 16);
 INSERT INTO contacts (link, icon, member) VALUES ('https://instagram.com/benastahl', 'fab fa-instagram', 16);
 INSERT INTO contacts (link, icon, member) VALUES ('https://github.com/thevolt6', 'fab fa-github', 16);
