@@ -1,8 +1,10 @@
 <template>
     <div class="member-wrapper">
+        <router-link target="_blank" v-bind:to="`/members/${fname.toLowerCase()[0]}${lname.toLowerCase()}`">
         <img v-bind:src="require(`../assets/people/${image}`)" style="width: 100%" />
+        </router-link>
         <figcaption class="member-text">
-            <h4>{{ name }}</h4>
+            <h4>{{ fname }} {{ lname }}</h4>
             <h5>[{{ position=="M"?"member":position=="P"?"president":"vice president"}}]</h5>
             <h6>{{ grade }}th grade</h6>
             <span v-for="contact in this.contact_list" v-bind:key="contact.id" class="contact-list">
@@ -17,7 +19,11 @@
     export default {
         name: "Member",
         props: {
-            name: {
+            fname: {
+                type: String,
+                required: true,
+            },
+            lname: {
                 type: String,
                 required: true,
             },

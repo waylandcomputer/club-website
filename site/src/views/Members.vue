@@ -7,13 +7,14 @@
             <div v-if="loading" class="loader"></div>
             <div v-else class="member-grid">
                 <div class="member" v-for="user in userData" v-bind:key="user.id">
-                    <Member
-                        :name="user.fname + ' ' + user.lname"
-                        :image="user.image"
-                        :grade="user.grade"
-                        :position="user.position"
-                        :contact_list="user.contact_list"
-                    />
+                        <Member
+                            :fname="user.fname"
+                            :lname="user.lname"
+                            :image="user.image"
+                            :grade="user.grade"
+                            :position="user.position"
+                            :contact_list="user.contact_list"
+                        />
                 </div>
             </div>
         </div>
