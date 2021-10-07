@@ -34,6 +34,11 @@ export default {
           );
         }
 
+        p5.windowResized = function () {
+          p5.createCanvas(window.innerWidth, window.innerHeight);
+          // canvas.position(0, 0);
+        }
+
         
 
         buttons.push(
