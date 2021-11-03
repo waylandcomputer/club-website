@@ -71,7 +71,7 @@ INSERT INTO contacts (link, icon, member) VALUES ('https://open.spotify.com/user
 INSERT INTO contacts (link, icon, member) VALUES ('https://asboyer.com/', 'fas fa-link', 1);
 
 INSERT INTO contacts (link, icon, member) VALUES ('mailto: ericxie6@gmail.com', 'fa fa-envelope', 4);
-INSERT INTO contacts (link, icon, member) VALUES ('https://www.instagram.com/ericxie_zz/', 'fab fa-instagram', 4);
+INSERT INTO contacts (link, icon, member) VALUES ('https://www.instagram.com/erictxie/', 'fab fa-instagram', 4);
 INSERT INTO contacts (link, icon, member) VALUES ('https://github.com/ericx1e', 'fab fa-github', 4);
 INSERT INTO contacts (link, icon, member) VALUES ('https://open.spotify.com/user/ericxxie?si=sCJdKbxVQVWEho6fVYAPng', 'fab fa-spotify', 4);
 
