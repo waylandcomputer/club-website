@@ -42,18 +42,19 @@ const routes = [
     component: Queue,
   },
   {
-    path: "/members/default",
-    name: "Default",
-    component: Default,
-  },  
-  {
     path: "/members/aboyer",
     name: "aboyer",
     component: aboyer,
   },
+  {
+    path: "/:catchAll(members/.*)",
+    name: 'Not Found',
+    component: Default
+  }
 ]
 
 const router = createRouter({
+  mode: 'history',
   history: createWebHistory(),
   routes
 })
