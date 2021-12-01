@@ -6,6 +6,7 @@ import Signup from '../views/Signup.vue'
 import Queue from '../views/Queue.vue'
 import Default from '../views/Default.vue'
 import aboyer from '../views/aboyer.vue'
+import kzhao from '../views/kzhao.vue'
 
 const routes = [
   {
@@ -51,6 +52,11 @@ const routes = [
     name: "aboyer",
     component: aboyer,
   },
+  {
+    path: "/members/kzhao",
+    name:"kzhao",
+    component: kzhao
+  }
 ]
 
 const router = createRouter({
