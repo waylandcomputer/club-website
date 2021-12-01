@@ -6,6 +6,7 @@ import Signup from '../views/Signup.vue'
 import Queue from '../views/Queue.vue'
 import Default from '../views/Default.vue'
 import aboyer from '../views/people/aboyer.vue'
+import bshen from '../views/people/bshen.vue'
 
 const routes = [
   {
@@ -45,6 +46,11 @@ const routes = [
     path: "/members/aboyer",
     name: "aboyer",
     component: aboyer,
+  },
+  {
+    path: "/members/bshen",
+    name: "bshen",
+    component: bshen,
   },
   {
     path: "/:catchAll(members/.*)",
