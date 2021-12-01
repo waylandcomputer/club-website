@@ -57,6 +57,7 @@ body {
     scrollbar-width: none;  /* Firefox */
     /*min-height: 50vh;*/
     /*the above is*/
+    color: rgb(165, 165, 165);
 }
 
 body::-webkit-scrollbar {
