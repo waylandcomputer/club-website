@@ -5,7 +5,7 @@ import Project from '../views/Project.vue'
 import Signup from '../views/Signup.vue'
 import Queue from '../views/Queue.vue'
 import Default from '../views/Default.vue'
-import aboyer from '../views/aboyer.vue'
+import aboyer from '../views/people/aboyer.vue'
 
 const routes = [
   {
