@@ -5,8 +5,8 @@ import Project from '../views/Project.vue'
 import Signup from '../views/Signup.vue'
 import Queue from '../views/Queue.vue'
 import Default from '../views/Default.vue'
-import aboyer from '../views/aboyer.vue'
 import kzhao from '../views/kzhao.vue'
+import aboyer from '../views/people/aboyer.vue'
 
 const routes = [
   {
@@ -43,11 +43,6 @@ const routes = [
     component: Queue,
   },
   {
-    path: "/members/default",
-    name: "Default",
-    component: Default,
-  },  
-  {
     path: "/members/aboyer",
     name: "aboyer",
     component: aboyer,
@@ -56,10 +51,16 @@ const routes = [
     path: "/members/kzhao",
     name:"kzhao",
     component: kzhao
+  },
+  {
+    path: "/:catchAll(members/.*)",
+    name: 'Not Found',
+    component: Default
   }
 ]
 
 const router = createRouter({
+  mode: 'history',
   history: createWebHistory(),
   routes
 })

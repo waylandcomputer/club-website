@@ -1,5 +1,6 @@
 <template>
     <div class="member-wrapper">
+
         <router-link target="_blank" v-bind:to="`/members/${fname.toLowerCase()[0]}${lname.toLowerCase()}`">
         <img v-bind:src="require(`../assets/people/${image}`)" style="width: 100%" />
         </router-link>
