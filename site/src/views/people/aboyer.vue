@@ -9,7 +9,6 @@
 </template>
 
 <script>
-console.log('this is where')
 </script>
 
 <style scoped>

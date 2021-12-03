@@ -5,8 +5,10 @@ import Project from '../views/Project.vue'
 import Signup from '../views/Signup.vue'
 import Queue from '../views/Queue.vue'
 import Default from '../views/Default.vue'
-import kzhao from '../views/people/kzhao.vue'
+
 import aboyer from '../views/people/aboyer.vue'
+import kzhao from '../views/people/kzhao.vue'
+// End import
 
 const routes = [
   {
@@ -49,9 +51,10 @@ const routes = [
   },
   {
     path: "/members/kzhao",
-    name:"kzhao",
+    name: "kzhao",
     component: kzhao
   },
+  // End routes
   {
     path: "/:catchAll(members/.*)",
     name: 'Not Found',

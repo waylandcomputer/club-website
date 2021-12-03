@@ -1,51 +1,13 @@
 <template>
-    <div class="signup">
-        <div class="innerf">
-            <p>
-                <a target="_blank" href="https://asboyer.com" style="color: #B5F29E">asboyer.com</a>
-            </p>
-        </div>
-    </div>
+    <h1>Kevin Zhao</h1>
 </template>
 
 <script>
-console.log('this is where')
+    console.log("Kevin was here.");  // If you want to use JavaScript, perhaps for animations, add it here.
 </script>
 
 <style scoped>
-
-.signup {
-    position: center;
-    background-color: rgb(39, 37, 37);
-    /*padding: 20px;*/
-    width: 100%;
-    height: 100vh;
-
-}
-
-.innerf {
-    border: 5px dashed #FFBC57;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 10px;
-    width: 30%;
-    padding: 30px;
-    /*margin-top: 50px;*/
-    /*margin: 0;*/
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    background-color: #1f1d1d;
-}
-
-
-p {
-    /*margin-top: 18px;*/
-    /*margin-bottom: 2px;*/
-    font-size: 15px;
-    text-transform: lowercase;
-}
-
+    h1 {
+        color: green
+    }
 </style>
