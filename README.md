@@ -23,8 +23,8 @@
 cd ~/Documents  # Navigate to Documents folder
 git clone https://github.com/waylandcomputer/club-website.git  # Download code from Github
 cd club-website/site  # Navigate to main code folder
-./verify_setup.sh  # Check everything is installed
-python3 new_member_subpage.py <First> <Last>
+./verify_setup.sh  # Check everything is installed (only run if on school Mac)
+python3 new_member_subpage.py <First> <Last>  # Generate files for your own subpage
 npm install
 npm run serve
 ```
