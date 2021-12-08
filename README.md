@@ -17,13 +17,14 @@
 * Git/Python
 	* These are listed together because they should be installed by default on Macs. 
 	* If not, (or if you want to update to the latest version), download them from the official websites: [Git](https://git-scm.com/downloads) and [Python](https://www.python.org/downloads/). At the time of writing, `Git_2-18-0` and `Python 3.9.1` are also available in Self Service.
-	* Python is actually not necessary for this website to run locally
 
 ## Run Website Locally
 ```
 cd ~/Documents  # Navigate to Documents folder
 git clone https://github.com/waylandcomputer/club-website.git  # Download code from Github
 cd club-website/site  # Navigate to main code folder
+./verify_setup.sh  # Check everything is installed
+python3 new_member_subpage.py <First> <Last>
 npm install
 npm run serve
 ```
